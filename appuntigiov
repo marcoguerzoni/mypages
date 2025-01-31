@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appunti per Giovanni</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-left: 5px solid #0056b3;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Appunti per Giovanni</h1>
+    
+    <div class="section">
+        <h2>Accesso</h2>
+        <p><strong>Utente:</strong> root</p>
+        <p><strong>Password:</strong> quella di prima</p>
+        <p><strong>Accesso via browser:</strong> <code>localhost:8787</code> per vedere RStudio</p>
+    </div>
+    
+    <div class="section">
+        <h2>Terminale</h2>
+        <p>A questo punto sei sul terminal <strong>tmux</strong> come prima.</p>
+        <p><strong>Attenzione:</strong> Dal browser possiamo scaricare qualsiasi file, incluso accedere a Google Drive e scaricare dati.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Come lavorare</h2>
+        <p>Giovanni, immagina di lavorare con GitLab. Funziona come GitHub, lo hai mai usato?</p>
+        <p>Di fatto, ogni progetto RStudio si sincronizza con il nostro account GitLab.</p>
+        <p>Possiamo fare commit e pull, oppure semplicemente copiare i nostri file R e lanciarli.</p>
+        <p>Ovviamente non è efficiente fare tutte le prove direttamente da lì.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Container e RStudio Server</h2>
+        <p>L'ultimo layer di complessità è dato dal fatto che RStudio Server gira in un container.</p>
+        <p>Appena Giovanni carica RStudio, ci manda un esempio.</p>
+        <p>Proviamo l'esempio e gli spieghiamo cosa non abbiamo capito.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Runtime e Avvio</h2>
+        <p><strong>Comandi utili:</strong></p>
+        <pre>runtime cli nome_programma path ed eventuali opzioni</pre>
+        <pre>runtime.sh (fa partire RStudio Server)</pre>
+        <p>Oppure:</p>
+        <pre>rstudio</pre>
+        <pre>parte rstudio server</pre>
+    </div>
+    
+    <div class="section">
+        <h2>Directory corretta</h2>
+        <p>Devi essere nella directory <code>exec</code> dove si trovano gli script aggiuntivi per i package R.</p>
+    </div>
+</body>
+</html>
