@@ -41,7 +41,7 @@
 <body>
     <h1>Indice degli Appunti</h1>
     <ul>
-        <li><a href="appunti_linuxvignette.html">Appunti Linux Vignette</a></li>
+        <li><a href="linuxvignette.html">Appunti Linux Vignette</a></li>
         <li><a href="tmuxvignette.html">Appunti Tmux Vignette</a></li>
         <li><a href="notesgio.html">Note di Giovanni</a></li>
     </ul>
