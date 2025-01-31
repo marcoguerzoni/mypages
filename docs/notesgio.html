@@ -3,81 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appunti per Giovanni</title>
+    <title>Guida alla Macchina V81 su Azure</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
         }
-        h1, h2 {
-            color: #0056b3;
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
         }
         pre {
-            background: #eee;
+            background: #f4f4f4;
             padding: 10px;
             border-radius: 5px;
             overflow-x: auto;
         }
-        .section {
-            margin-bottom: 20px;
-            padding: 10px;
-            border-left: 5px solid #0056b3;
-            background: #f9f9f9;
-        }
     </style>
 </head>
 <body>
-    <h1>Appunti per Giovanni</h1>
+    <h1>Guida alla Macchina V81 su Azure</h1>
     
-    <div class="section">
-        <h2>Accesso</h2>
-        <p><strong>Utente:</strong> root</p>
-        <p><strong>Password:</strong> quella di prima</p>
-        <p><strong>Accesso via browser:</strong> <code>localhost:8787</code> per vedere RStudio</p>
-    </div>
+    <h2>Accesso alla Macchina Virtuale</h2>
+    <p><strong>Federico:</strong> Segui questi passaggi per accedere alla macchina virtuale V81 su Microsoft Azure.</p>
     
-    <div class="section">
-        <h2>Terminale</h2>
-        <p>A questo punto sei sul terminal <strong>tmux</strong> come prima.</p>
-        <p><strong>Attenzione:</strong> Dal browser possiamo scaricare qualsiasi file, incluso accedere a Google Drive e scaricare dati.</p>
-    </div>
+    <h3>Primo Accesso</h3>
+    <ol>
+        <li>Accedi al <a href="https://portal.azure.com" target="_blank">Microsoft Azure Portal</a> e autenticati.</li>
+        <li>Vai su <strong>DevTest Labs</strong> (tra le icone in alto, potrebbe essere necessario premere sulla freccia).</li>
+        <li>Trova il laboratorio <strong>es-cx670-lab</strong> e cliccaci sopra.</li>
+        <li>Dovresti vedere un elenco di computer.</li>
+        <li>Cerca la macchina <strong>V81</strong>.</li>
+        <li>Se non la vedi, nel menu a sinistra vai su <strong>My Lab</strong> e clicca su <strong>Claimable Machines</strong>.</li>
+        <li>Seleziona la macchina V81 e fai il <strong>claim</strong>.</li>
+        <li>Imposta <strong>Autoshutdown</strong> su <code>No</code>. Se è attivo, riceverai una mail con l'opzione di snooze.</li>
+    </ol>
+    <p><em>Questa operazione va fatta solo la prima volta.</em></p>
     
-    <div class="section">
-        <h2>Come lavorare</h2>
-        <p>Giovanni, immagina di lavorare con GitLab. Funziona come GitHub, lo hai mai usato?</p>
-        <p>Di fatto, ogni progetto RStudio si sincronizza con il nostro account GitLab.</p>
-        <p>Possiamo fare commit e pull, oppure semplicemente copiare i nostri file R e lanciarli.</p>
-        <p>Ovviamente non è efficiente fare tutte le prove direttamente da lì.</p>
-    </div>
+    <h3>Accessi Successivi</h3>
+    <p>Ogni volta che devi accedere:</p>
+    <ol>
+        <li>Dal portale Azure, vai su <strong>Home</strong> → <strong>Virtual Machines</strong> e cerca <strong>V81</strong>.</li>
+        <li>Qui puoi accendere e spegnere la macchina per evitare costi inutili.</li>
+    </ol>
     
-    <div class="section">
-        <h2>Container e RStudio Server</h2>
-        <p>L'ultimo layer di complessità è dato dal fatto che RStudio Server gira in un container.</p>
-        <p>Appena Giovanni carica RStudio, ci manda un esempio.</p>
-        <p>Proviamo l'esempio e gli spieghiamo cosa non abbiamo capito.</p>
-    </div>
+    <h2>Gestione delle Risorse</h2>
+    <ul>
+        <li>Puoi modificare la <strong>size</strong> della macchina virtuale dall'interno della VM.</li>
+        <li>Il <strong>monitoring</strong> si trova nella sezione <strong>Overview</strong>.</li>
+        <li>Per verificare l'uso delle CPU e valutare se conviene una macchina meno costosa, Federico mostrerà un metodo.</li>
+    </ul>
     
-    <div class="section">
-        <h2>Runtime e Avvio</h2>
-        <p><strong>Comandi utili:</strong></p>
-        <pre>runtime cli nome_programma path ed eventuali opzioni</pre>
-        <pre>runtime.sh (fa partire RStudio Server)</pre>
-        <p>Oppure:</p>
-        <pre>rstudio</pre>
-        <pre>parte rstudio server</pre>
-    </div>
+    <h2>Disco di Rete</h2>
+    <p>Il disco di rete serve per salvare file e dati.</p>
+    <ul>
+        <li>Se il disco SSD non è abbastanza grande, possiamo valutare un aumento.</li>
+        <li>Il percorso esatto del disco di rete verrà indicato dall'interno del server.</li>
+    </ul>
     
-    <div class="section">
-        <h2>Directory corretta</h2>
-        <p>Devi essere nella directory <code>exec</code> dove si trovano gli script aggiuntivi per i package R.</p>
-    </div>
+    <h2>Accesso via MobaXterm</h2>
+    <pre>
+cd .ssh
+cat > config
+    </pre>
+    <p><em>Dopo aver dato questo comando, incolla l'email di Pelosi con il tasto destro del mouse.</em></p>
+    <pre>
+chmod 600 config
+cd
+ssh v81
+    </pre>
+    <p>Ora sei dentro. Prova comandi come <code>htop</code> per monitorare l'attività.</p>
+    
+    <h2>Utilizzo di tmux</h2>
+    <p>Con <code>tsu</code>, si apre una sessione <strong>tmux</strong>, che permette di mantenere il terminale attivo anche dopo la disconnessione.</p>
+    <p>Comandi utili:</p>
+    <ul>
+        <li><code>Ctrl + b</code> seguito da <code>c</code>: apri una nuova sessione.</li>
+        <li><code>Ctrl + b</code> seguito da <code>n</code>: passa alla sessione successiva.</li>
+        <li><code>Ctrl + b</code> seguito da <code>d</code>: stacca la sessione.</li>
+    </ul>
+    <p>Per verificare lo spazio su disco: <code>df -h</code>.</p>
+    
+    <h2>Accesso alla GUI del Server</h2>
+    <p>Per usare il server con interfaccia grafica:</p>
+    <ol>
+        <li>Accedi a <strong>MobaXterm</strong> ma usa <strong>V81X</strong>.</li>
+        <li>Lancia <code>nomachine</code>.</li>
+        <li>Aggiungi una nuova macchina con questi parametri:</li>
+    </ol>
+    <pre>
+Nome: dsuser@es-cx670-v81
+Porta: 4681
+Host: 127.0.0.1
+    </pre>
+    <p>Per la password, torna su MobaXterm e usa il comando:</p>
+    <pre>
+cut .rup/*
+    </pre>
+    <p>Ora potrai vedere il desktop del server su NoMachine.</p>
+    
+    <h2>Utilizzo di GitLab</h2>
+    <p>Il lavoro su RStudio può essere sincronizzato con GitLab:</p>
+    <ul>
+        <li>Ogni progetto RStudio si sincronizza con GitLab.</li>
+        <li>Possiamo fare commit e pull direttamente.</li>
+        <li>In alternativa, possiamo copiare i file R manualmente ed eseguirli.</li>
+    </ul>
+    
+    <h2>Uso di RStudio Server in un Container</h2>
+    <p>RStudio Server sarà eseguito in un container:</p>
+    <ol>
+        <li>Assicurati di essere nella directory <code>exec</code> con gli script aggiuntivi.</li>
+        <li>Apri un browser e vai su <code>localhost:8787</code>.</li>
+        <li>Accedi con:</li>
+    </ol>
+    <pre>
+Utente: root
+Password: quella generata prima
+    </pre>
+    <p>Dal browser possiamo anche scaricare dati da Google Drive.</p>
 </body>
 </html>
+
