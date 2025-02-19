@@ -359,12 +359,137 @@ display: none;
 
 <div id="introduzione" class="section level2">
 <h2><strong>Introduzione</strong></h2>
-<p>I modelli DSGE (Dynamic Stochastic General Equilibrium) sono
-strumenti fondamentali per l’analisi macroeconomica, ma spesso non
-riescono a catturare l’intera complessità delle relazioni economiche
-reali. Le <strong>DSGE-Informed Neural Networks (DINN)</strong>
-combinano la teoria economica dei DSGE con la flessibilità delle reti
-neurali per migliorare le previsioni macroeconomiche.</p>
+</div>
+<div id="dsge-informed-neural-networks-dinn" class="section level1">
+<h1>DSGE-Informed Neural Networks (DINN)</h1>
+<p>Le <strong>DSGE-Informed Neural Networks (DINN)</strong>
+rappresentano un approccio ibrido che unisce le caratteristiche dei
+modelli DSGE (Dynamic Stochastic General Equilibrium) con la
+flessibilità e la capacità di apprendimento delle reti neurali. L’idea
+di fondo è sfruttare la struttura teorica dei modelli DSGE, che
+descrivono l’evoluzione dinamica di variabili macroeconomiche sulla base
+di principi microeconomici (preferenze, vincoli di bilancio, tecnologia,
+ecc.), e combinarla con la potenza di generalizzazione delle reti
+neurali.</p>
+<div id="motivazioni-principali" class="section level2">
+<h2>Motivazioni principali</h2>
+<ol style="list-style-type: decimal">
+<li><strong>Limitazioni dei DSGE puri</strong><br />
+I modelli DSGE sono apprezzati perché offrono interpretazioni
+“strutturali” dell’economia, spiegando i meccanismi causali alla base
+dei fenomeni macroeconomici e consentendo l’analisi delle politiche
+economiche. Tuttavia, presentano alcune rigidità:
+<ul>
+<li>Necessitano di ipotesi semplificatrici (ad esempio sulle forme
+funzionali delle relazioni economiche) che a volte non catturano
+pienamente la complessità dei dati.<br />
+</li>
+<li>Possono essere difficili da stimare in presenza di molte variabili o
+di shock complessi.<br />
+</li>
+<li>Talvolta risultano poco flessibili nell’adattarsi a variazioni
+strutturali o a comportamenti non lineari.</li>
+</ul></li>
+<li><strong>Limitazioni delle reti neurali pure</strong><br />
+Le reti neurali e gli approcci di machine learning in generale
+possiedono ottime capacità predittive, specialmente con molti dati.
+Tuttavia, se applicati in modo isolato a contesti macroeconomici:
+<ul>
+<li>Possono risultare in una “black box”, con poca interpretabilità
+economica.<br />
+</li>
+<li>Trascurano la struttura teorica e i vincoli fondamentali
+dell’economia (vincoli di bilancio, logica intertemporale, ecc.).<br />
+</li>
+<li>Se non adeguatamente vincolati, possono incorrere in overfitting,
+dando previsioni o analisi di scenario non coerenti con la teoria
+economica.</li>
+</ul></li>
+<li><strong>L’idea di un approccio ibrido</strong><br />
+Unire i punti di forza di entrambi: da un lato il rigore e la struttura
+dei modelli DSGE; dall’altro, la flessibilità e la capacità di
+apprendimento delle reti neurali. In pratica, integrare la conoscenza
+economica “a priori” (quella che sta alla base di un DSGE) direttamente
+nel processo di costruzione e addestramento di una rete neurale.</li>
+</ol>
+</div>
+<div id="come-funziona-a-grandi-linee" class="section level2">
+<h2>Come funziona (a grandi linee)</h2>
+<ol style="list-style-type: decimal">
+<li><strong>Incorporazione della struttura DSGE</strong>
+<ul>
+<li>Il modello DSGE fornisce le relazioni chiave tra variabili (consumo,
+output, inflazione, salari, tasso d’interesse, ecc.).<br />
+</li>
+<li>Queste relazioni vengono integrate nella rete neurale per guidarne
+l’apprendimento, tramite diverse strategie:
+<ul>
+<li><em>Vincoli</em>: alcuni parametri della rete sono penalizzati se
+violano principi economici fondamentali.<br />
+</li>
+<li><em>Feature engineering strutturale</em>: le variabili in ingresso
+e/o in uscita della rete neurale vengono costruite tenendo conto della
+struttura DSGE (es. tassi di crescita, output gap, shock, ecc.).<br />
+</li>
+<li><em>Architettura informata</em>: la rete viene progettata in modo
+che alcuni layer rispecchino aspetti fondamentali della dinamica
+economica (vincoli intertemporali, funzioni di utilità, ecc.).</li>
+</ul></li>
+</ul></li>
+<li><strong>Allenamento su dati reali</strong>
+<ul>
+<li>Dopo aver costruito il “guscio” teoricamente guidato, la rete
+neurale viene addestrata su dati storici (stime macroeconomiche, serie
+temporali, ecc.).<br />
+</li>
+<li>L’allenamento tiene conto sia della coerenza con la teoria (DSGE)
+sia del fitting sui dati empirici, minimizzando l’errore di previsione
+nel rispetto dei vincoli fondamentali.</li>
+</ul></li>
+<li><strong>Utilizzo per previsioni e analisi di scenario</strong>
+<ul>
+<li>Una volta addestrata, la DINN conserva i vantaggi interpretativi
+tipici di un DSGE (analisi di shock, politiche monetarie e fiscali,
+ecc.), ma con maggior adattabilità e precisione grazie all’uso delle
+reti neurali.<br />
+</li>
+<li>I vincoli teorici evitano l’effetto “scatola nera”: le simulazioni
+rimangono coerenti con la logica economica.</li>
+</ul></li>
+</ol>
+</div>
+<div id="vantaggi" class="section level2">
+<h2>Vantaggi</h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>Maggiore interpretabilità rispetto alle reti neurali
+pure</strong><br />
+Poiché la struttura DSGE “illumina” i vincoli fondamentali e i
+meccanismi di trasmissione, l’analisi resta più vicina alla logica
+economica.</p></li>
+<li><p><strong>Flessibilità rispetto ai DSGE puri</strong><br />
+Le reti neurali possono catturare relazioni non lineari ed effetti di
+interazione complessi, riducendo la rigidità tipica dei DSGE.</p></li>
+<li><p><strong>Robustezza nelle previsioni e riduzione
+dell’overfitting</strong><br />
+L’integrazione di vincoli teorici impedisce alla rete di “inseguire
+troppo” i dati, producendo previsioni più stabili e plausibili sul piano
+economico.</p></li>
+<li><p><strong>Possibilità di analisi controfattuali</strong><br />
+Come nei DSGE, la DINN può eseguire simulazioni “cosa succede se…”, ma
+con una capacità superiore nel gestire scenari complessi o non
+lineari.</p></li>
+<li><p><strong>Benefici nella comprensione e comunicazione dei
+risultati</strong><br />
+Per economisti e policymaker, un modello che unisce rigore teorico e
+forza empirica è spesso più accettabile di una “scatola nera” pura,
+facilitando la comunicazione dei risultati.</p></li>
+</ol>
+<p>In sintesi, le DSGE-Informed Neural Networks nascono dall’esigenza di
+unire i fondamenti teorici dei modelli macroeconomici con la
+flessibilità e potenza di calcolo delle reti neurali. L’obiettivo è
+ottenere un modello che fornisca un miglior fit sui dati e una maggiore
+capacità di simulazione, senza rinunciare alla coerenza con i principi
+fondamentali della teoria economica.</p>
 <p>In questa guida, implementeremo una <strong>rete neurale informata
 dal DSGE</strong>, inserendo le equazioni fondamentali del modello DSGE
 direttamente nella funzione di perdita della rete neurale.</p>
@@ -373,8 +498,8 @@ direttamente nella funzione di perdita della rete neurale.</p>
 <div id="struttura-del-modello-dsge" class="section level2">
 <h2><strong>1. Struttura del Modello DSGE</strong></h2>
 <p>Un DSGE tipico include:</p>
-<div id="equazione-di-bellman-condizione-di-ottimalità-dinamica" class="section level3">
-<h3><strong>Equazione di Bellman (Condizione di Ottimalità
+<div id="equazione-di-bellman-o-simile-condizione-di-ottimalità-dinamica" class="section level3">
+<h3><strong>Equazione di Bellman o simile (Condizione di Ottimalità
 Dinamica)</strong></h3>
 <p>L’equazione di Bellman rappresenta la decisione ottimale di un agente
 economico nel tempo. In un modello DSGE standard, può essere scritta
@@ -426,6 +551,41 @@ deprezzamento.</p>
 <hr />
 </div>
 </div>
+<div id="dsge-e-funzione-di-perdita" class="section level2">
+<h2><strong>2. DSGE e Funzione di Perdita</strong></h2>
+<p>La funzione di perdita in una <strong>DSGE-Informed Neural
+Network</strong> deve rispettare le condizioni economiche del modello.
+La formuliamo come:</p>
+<p><span class="math display">\[L(\theta) = \lambda_1 L_{Bellman} +
+\lambda_2 L_{Equilibrio} + \lambda_3 L_{Capitale}\]</span></p>
+<p>dove:</p>
+<div id="errore-nellequazione-di-bellman" class="section level3">
+<h3>Errore nell’Equazione di Bellman</h3>
+<p><span class="math display">\[L_{Bellman} = \sum_t \left( V(k_t, z_t)
+- \left( U(c_t) + \beta E_t[V(k_{t+1}, z_{t+1})] \right)
+\right)^2\]</span></p>
+<p>Questa penalità assicura che la rete neurale approssimi correttamente
+l’ottimalità intertemporale.</p>
+</div>
+<div id="errore-nellequilibrio-del-mercato-dei-beni" class="section level3">
+<h3>Errore nell’Equilibrio del Mercato dei Beni</h3>
+<p><span class="math display">\[L_{Equilibrio} = \sum_t \left( Y_t -
+(C_t + I_t + G_t) \right)^2\]</span></p>
+<p>Questo termine penalizza la rete se la somma delle componenti
+dell’output totale non eguaglia la produzione aggregata.</p>
+</div>
+<div id="errore-nella-legge-di-moto-del-capitale" class="section level3">
+<h3>Errore nella Legge di Moto del Capitale</h3>
+<p><span class="math display">\[L_{Capitale} = \sum_t \left( K_{t+1} -
+\left( (1-\delta) K_t + I_t \right) \right)^2\]</span></p>
+<p>Questa componente della <strong>loss function</strong> garantisce che
+la rete rispetti la legge di accumulazione del capitale, penalizzando
+eventuali deviazioni dalla sua dinamica.</p>
+<p>I parametri <span class="math inline">\(\lambda_1, \lambda_2,
+\lambda_3\)</span> regolano l’importanza relativa di ciascun vincolo
+nella funzione di perdita totale.</p>
+</div>
+</div>
 <div id="implementazione-in-python-con-pytorch" class="section level2">
 <h2><strong>2. Implementazione in Python con PyTorch</strong></h2>
 <pre class="r"><code>import torch
@@ -473,15 +633,8 @@ for epoch in range(1000):
     if epoch % 100 == 0:
         print(f&#39;Epoch {epoch}, Loss: {loss.item()}&#39;)</code></pre>
 <hr />
-</div>
-<div id="abilitare-i-commenti-con-hypothesis" class="section level2">
-<h2><strong>3. Abilitare i Commenti con Hypothesis</strong></h2>
 <script>!function(){"use strict";var s={"scripts/annotator.bundle.js":"scripts/annotator.bundle.js?10d4ae","styles/annotator.css":"styles/annotator.css?427463","styles/annotator.css.map":"styles/annotator.css.map?94a857","styles/highlights.css":"styles/highlights.css?6b4ebd","styles/highlights.css.map":"styles/highlights.css.map?241350","styles/katex.min.css":"styles/katex.min.css?d92c5a","styles/katex.min.css.map":"styles/katex.min.css.map?e7e03f","styles/pdfjs-overrides.css":"styles/pdfjs-overrides.css?c95edf","styles/pdfjs-overrides.css.map":"styles/pdfjs-overrides.css.map?1d8ac6","styles/sidebar.css":"styles/sidebar.css?a3d7cb","styles/sidebar.css.map":"styles/sidebar.css.map?526530","styles/ui-playground.css":"styles/ui-playground.css?8d6c66","styles/ui-playground.css.map":"styles/ui-playground.css.map?b2e29b","scripts/annotator.bundle.js.map":"scripts/annotator.bundle.js.map?36fd36","scripts/sidebar.bundle.js":"scripts/sidebar.bundle.js?fe7697","scripts/ui-playground.bundle.js":"scripts/ui-playground.bundle.js?f9819e","scripts/sidebar.bundle.js.map":"scripts/sidebar.bundle.js.map?286e07","scripts/ui-playground.bundle.js.map":"scripts/ui-playground.bundle.js.map?03eb8f"};function e(s){s.setAttribute("data-hypothesis-asset","")}function t(s,t){var o=s.createElement("link");o.rel="stylesheet",o.type="text/css",o.href=t,e(o),s.head.appendChild(o)}function o(s,t){var o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},r=o.esModule,n=void 0===r||r,i=o.forceReload,a=void 0!==i&&i,l=s.createElement("script");n&&(l.type="module"),a&&(t+="#ts=".concat(Date.now())),l.src=t,l.async=!1,e(l),s.head.appendChild(l)}function r(s,t,o,r){var n=s.createElement("link");n.rel=t,n.href=r,n.type="application/annotator+".concat(o),e(n),s.head.appendChild(n)}function n(s,t,o){var r=s.createElement("link");r.rel="preload",r.as=t,r.href=o,"fetch"===t&&(r.crossOrigin="anonymous"),e(r),s.head.appendChild(r)}function i(s,e){return s.assetRoot+"build/"+s.manifest[e]}function a(s){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:document;if(-1===s.indexOf("{"))return s;var t=function(){var s,e,t=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:document).currentScript;return t?(s=t.src,(e=s.match(/(https?):\/\/([^:/]+)/))?{protocol:e[1],hostname:e[2]}:null):null}(e);if(!t)throw new Error("Could not process URL template because script origin is unknown");return s=(s=s.replace("{current_host}",t.hostname)).replace("{current_scheme}",t.protocol)}if(function(){var s=[()=>Object.fromEntries([]),()=>new URL(document.location.href),()=>new Request("https://hypothes.is"),()=>Element.prototype.attachShadow,()=>CSS.supports("display: grid"),()=>(document.evaluate("/html/body",document,null,XPathResult.ANY_TYPE,null),!0)];try{return s.every((s=>s()))}catch(s){return!1}}()){var l=function(s){for(var e={},t=s.querySelectorAll("script.js-hypothesis-config"),o=0;o<t.length;o++){var r=void 0;try{r=JSON.parse(t[o].textContent||"")}catch(s){console.warn("Could not parse settings from js-hypothesis-config tags",s),r={}}Object.assign(e,r)}return e}(document),p=a(l.assetRoot||"https://cdn.hypothes.is/hypothesis/1.1574.0/");if(document.querySelector("hypothesis-app")){!function(s,e){n(s,"fetch",e.apiUrl),n(s,"fetch",e.apiUrl+"links");for(var r=0,a=["scripts/sidebar.bundle.js"];r<a.length;r++)o(s,i(e,a[r]),{esModule:!0});for(var l=0,p=["styles/katex.min.css","styles/sidebar.css"];l<p.length;l++)t(s,i(e,p[l]))}(document,{assetRoot:p,manifest:s,apiUrl:l.apiUrl})}else{var c=function(){var s;return null===(s=(arguments.length>0&&void 0!==arguments[0]?arguments[0]:window).chrome)||void 0===s||null===(s=s.runtime)||void 0===s?void 0:s.id}();if(c&&!function(s){return!!(arguments.length>1&&void 0!==arguments[1]?arguments[1]:document).querySelector("script.js-hypothesis-config[data-extension-id=".concat(s,"]"))}(c))throw new Error("Could not start Hypothesis extension as configuration is missing");var d=l,h=a(d.notebookAppUrl||"https://hypothes.is/notebook"),u=a(d.profileAppUrl||"https://hypothes.is/user-profile"),y=a(d.sidebarAppUrl||"https://hypothes.is/app.html");!function(s,e){if(!s.querySelector('link[type="application/annotator+html"]')){r(s,"sidebar","html",e.sidebarAppUrl),r(s,"notebook","html",e.notebookAppUrl),r(s,"profile","html",e.profileAppUrl),n(s,"style",i(e,"styles/annotator.css")),r(s,"hypothesis-client","javascript",e.assetRoot+"build/boot.js");for(var a=0,l=["scripts/annotator.bundle.js"];a<l.length;a++)o(s,i(e,l[a]),{esModule:!1});var p=[];void 0!==window.PDFViewerApplication&&p.push("styles/pdfjs-overrides.css"),p.push("styles/highlights.css");for(var c=0,d=p;c<d.length;c++)t(s,i(e,d[c]))}}(document,{assetRoot:p,manifest:s,notebookAppUrl:h,profileAppUrl:u,sidebarAppUrl:y})}}else console.warn("The Hypothesis annotation tool is not supported in this browser. See https://web.hypothes.is/help/which-browsers-are-supported-by-hypothesis/.")}();
 </script>
-<p>Hypothesis è un sistema open-source che consente di
-<strong>evidenziare e commentare</strong> parti del testo direttamente
-nel browser.</p>
-<hr />
 </div>
 <div id="conclusione" class="section level2">
 <h2><strong>4. Conclusione</strong></h2>
@@ -500,6 +653,7 @@ nel browser.</p>
 economica</strong> tipica dei DSGE, migliorando al contempo la
 <strong>capacità predittiva</strong> con tecniche di deep learning.
 🚀</p>
+</div>
 </div>
 
 
