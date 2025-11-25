@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f715285a8bf5a323b0ac55727b62660d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f715285a8bf5a323b0ac55727b62660d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f715285a8bf5a323b0ac55727b62660d = L.map(
+                "map_f715285a8bf5a323b0ac55727b62660d",
+                {
+                    center: [45.467358090000005, 9.171163815454547],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ab108ff814580fe546f90bab5f6c707e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ab108ff814580fe546f90bab5f6c707e.addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+            var circle_marker_0b23894850c667b56e039d2cd55e77f1 = L.circleMarker(
+                [45.46008463, 9.17759457],
+                {"bubblingMouseEvents": true, "color": "#fc7d5eff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc7d5eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_3e3315c0d8f1689b55dde13700fa4496 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_efe0a5f1bef195ffd25e102d0866c2d9 = $(`<div id="html_efe0a5f1bef195ffd25e102d0866c2d9" style="width: 100.0%; height: 100.0%;"><b>A. Manzoni</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 211.00 (score: 6)<br><b>Somma inclusività:</b> 190.00 (score: 5)<br><b>Somma benessere mentale:</b> 49.00 (score: 4)<br><br><b>Media meritocrazia:</b> 0.38 (score: 9)<br><b>Media inclusività:</b> 0.34 (score: 3)<br><b>Media benessere mentale:</b> 0.09 (score: 5)<br><b>Numero frasi:</b> 556</div>`)[0];
+                popup_3e3315c0d8f1689b55dde13700fa4496.setContent(html_efe0a5f1bef195ffd25e102d0866c2d9);
+            
+        
+
+        circle_marker_0b23894850c667b56e039d2cd55e77f1.bindPopup(popup_3e3315c0d8f1689b55dde13700fa4496)
+        ;
+
+        
+    
+    
+            var circle_marker_2476f2c31af3d7c2c2bd6227546d4a22 = L.circleMarker(
+                [45.45540106, 9.19947411],
+                {"bubblingMouseEvents": true, "color": "#fee5d9ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_94facd3b1af4fc8e4b5644bced14fc5d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_e44651c08483a29c64d9e28bb59a79e3 = $(`<div id="html_e44651c08483a29c64d9e28bb59a79e3" style="width: 100.0%; height: 100.0%;"><b>G. Berchet</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 123.00 (score: 3)<br><b>Somma inclusività:</b> 146.00 (score: 3)<br><b>Somma benessere mentale:</b> 32.00 (score: 3)<br><br><b>Media meritocrazia:</b> 0.26 (score: 8)<br><b>Media inclusività:</b> 0.31 (score: 2)<br><b>Media benessere mentale:</b> 0.07 (score: 3)<br><b>Numero frasi:</b> 470</div>`)[0];
+                popup_94facd3b1af4fc8e4b5644bced14fc5d.setContent(html_e44651c08483a29c64d9e28bb59a79e3);
+            
+        
+
+        circle_marker_2476f2c31af3d7c2c2bd6227546d4a22.bindPopup(popup_94facd3b1af4fc8e4b5644bced14fc5d)
+        ;
+
+        
+    
+    
+            var circle_marker_42326152e69ff611c77bf0cb72b4a60e = L.circleMarker(
+                [45.53011579, 9.02764635],
+                {"bubblingMouseEvents": true, "color": "#fc7d5eff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fc7d5eff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_4aea4c580ff240f29e368c014f3de0e5 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_6a1e03bfa516385c738800dbd8d077cb = $(`<div id="html_6a1e03bfa516385c738800dbd8d077cb" style="width: 100.0%; height: 100.0%;"><b>Rebora</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 215.00 (score: 6)<br><b>Somma inclusività:</b> 404.00 (score: 8)<br><b>Somma benessere mentale:</b> 116.00 (score: 8)<br><br><b>Media meritocrazia:</b> 0.23 (score: 3)<br><b>Media inclusività:</b> 0.43 (score: 8)<br><b>Media benessere mentale:</b> 0.12 (score: 9)<br><b>Numero frasi:</b> 947</div>`)[0];
+                popup_4aea4c580ff240f29e368c014f3de0e5.setContent(html_6a1e03bfa516385c738800dbd8d077cb);
+            
+        
+
+        circle_marker_42326152e69ff611c77bf0cb72b4a60e.bindPopup(popup_4aea4c580ff240f29e368c014f3de0e5)
+        ;
+
+        
+    
+    
+            var circle_marker_f95e8961d0b9e2713ceb14bbd40999d1 = L.circleMarker(
+                [45.52627892, 9.03916321],
+                {"bubblingMouseEvents": true, "color": "#ee523dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ee523dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_2b1d6bcb713f8aa1dbb801f801f059f9 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_161df438d96ca6c6866d9aa42fa8c241 = $(`<div id="html_161df438d96ca6c6866d9aa42fa8c241" style="width: 100.0%; height: 100.0%;"><b>Rebora</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 215.00 (score: 7)<br><b>Somma inclusività:</b> 404.00 (score: 8)<br><b>Somma benessere mentale:</b> 116.00 (score: 9)<br><br><b>Media meritocrazia:</b> 0.23 (score: 4)<br><b>Media inclusività:</b> 0.43 (score: 8)<br><b>Media benessere mentale:</b> 0.12 (score: 9)<br><b>Numero frasi:</b> 947</div>`)[0];
+                popup_2b1d6bcb713f8aa1dbb801f801f059f9.setContent(html_161df438d96ca6c6866d9aa42fa8c241);
+            
+        
+
+        circle_marker_f95e8961d0b9e2713ceb14bbd40999d1.bindPopup(popup_2b1d6bcb713f8aa1dbb801f801f059f9)
+        ;
+
+        
+    
+    
+            var circle_marker_87b981e3e96f1d87cef4b5047356e635 = L.circleMarker(
+                [45.46156246, 9.18070252],
+                {"bubblingMouseEvents": true, "color": "#fca487ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fca487ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_831a6f2231a6ce65dba41062e5fd57ce = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_258bcb9a15348dd5e05bb2ee5a63802e = $(`<div id="html_258bcb9a15348dd5e05bb2ee5a63802e" style="width: 100.0%; height: 100.0%;"><b>Tito Livio</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 185.00 (score: 5)<br><b>Somma inclusività:</b> 174.00 (score: 4)<br><b>Somma benessere mentale:</b> 54.00 (score: 5)<br><br><b>Media meritocrazia:</b> 0.42 (score: 10)<br><b>Media inclusività:</b> 0.39 (score: 6)<br><b>Media benessere mentale:</b> 0.12 (score: 8)<br><b>Numero frasi:</b> 443</div>`)[0];
+                popup_831a6f2231a6ce65dba41062e5fd57ce.setContent(html_258bcb9a15348dd5e05bb2ee5a63802e);
+            
+        
+
+        circle_marker_87b981e3e96f1d87cef4b5047356e635.bindPopup(popup_831a6f2231a6ce65dba41062e5fd57ce)
+        ;
+
+        
+    
+    
+            var circle_marker_651dabb0080bd16119910c3886841a6e = L.circleMarker(
+                [45.45059275, 9.2167409],
+                {"bubblingMouseEvents": true, "color": "#fdc6b0ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdc6b0ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_f128e7271ff2cd2602f80a002832fb3b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_ecb8230a96c27c563c1d27d666d8079f = $(`<div id="html_ecb8230a96c27c563c1d27d666d8079f" style="width: 100.0%; height: 100.0%;"><b>A. Einstein</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 156.00 (score: 4)<br><b>Somma inclusività:</b> 143.00 (score: 3)<br><b>Somma benessere mentale:</b> 51.00 (score: 5)<br><br><b>Media meritocrazia:</b> 0.40 (score: 9)<br><b>Media inclusività:</b> 0.37 (score: 5)<br><b>Media benessere mentale:</b> 0.13 (score: 10)<br><b>Numero frasi:</b> 386</div>`)[0];
+                popup_f128e7271ff2cd2602f80a002832fb3b.setContent(html_ecb8230a96c27c563c1d27d666d8079f);
+            
+        
+
+        circle_marker_651dabb0080bd16119910c3886841a6e.bindPopup(popup_f128e7271ff2cd2602f80a002832fb3b)
+        ;
+
+        
+    
+    
+            var circle_marker_8433378a23e84627616ab1e58116c948 = L.circleMarker(
+                [45.46351087, 9.20279863],
+                {"bubblingMouseEvents": true, "color": "#b60d16ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b60d16ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_9e4b49fa1c01e717499104afbccf3c89 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_c502cdcdd66b8ca00120305f28009a66 = $(`<div id="html_c502cdcdd66b8ca00120305f28009a66" style="width: 100.0%; height: 100.0%;"><b>Leonardo da Vinci</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 249.00 (score: 9)<br><b>Somma inclusività:</b> 206.00 (score: 5)<br><b>Somma benessere mentale:</b> 42.00 (score: 3)<br><br><b>Media meritocrazia:</b> 0.41 (score: 10)<br><b>Media inclusività:</b> 0.34 (score: 3)<br><b>Media benessere mentale:</b> 0.07 (score: 3)<br><b>Numero frasi:</b> 613</div>`)[0];
+                popup_9e4b49fa1c01e717499104afbccf3c89.setContent(html_c502cdcdd66b8ca00120305f28009a66);
+            
+        
+
+        circle_marker_8433378a23e84627616ab1e58116c948.bindPopup(popup_9e4b49fa1c01e717499104afbccf3c89)
+        ;
+
+        
+    
+    
+            var circle_marker_3e14d1360ee9fe589b3e97421558f349 = L.circleMarker(
+                [45.47773885, 9.142555],
+                {"bubblingMouseEvents": true, "color": "#fee5d9ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fee5d9ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_a2e476e22941b2071d00b3380b638f27 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d340825f0bf57dad0802618fe17042a4 = $(`<div id="html_d340825f0bf57dad0802618fe17042a4" style="width: 100.0%; height: 100.0%;"><b>Vittorio Veneto</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 151.00 (score: 3)<br><b>Somma inclusività:</b> 344.00 (score: 7)<br><b>Somma benessere mentale:</b> 106.00 (score: 8)<br><br><b>Media meritocrazia:</b> 0.24 (score: 5)<br><b>Media inclusività:</b> 0.54 (score: 10)<br><b>Media benessere mentale:</b> 0.17 (score: 10)<br><b>Numero frasi:</b> 640</div>`)[0];
+                popup_a2e476e22941b2071d00b3380b638f27.setContent(html_d340825f0bf57dad0802618fe17042a4);
+            
+        
+
+        circle_marker_3e14d1360ee9fe589b3e97421558f349.bindPopup(popup_a2e476e22941b2071d00b3380b638f27)
+        ;
+
+        
+    
+    
+            var circle_marker_b34603e32705bad7cb42dcdb40fb4af1 = L.circleMarker(
+                [45.41888453, 9.27273498],
+                {"bubblingMouseEvents": true, "color": "#99000dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#99000dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_d7d0d9858de990ea9a4e499b4aeca020 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d34bb0d731e746e48b0299b9bb8bf16b = $(`<div id="html_d34bb0d731e746e48b0299b9bb8bf16b" style="width: 100.0%; height: 100.0%;"><b>P. Levi</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 505.00 (score: 10)<br><b>Somma inclusività:</b> 975.00 (score: 10)<br><b>Somma benessere mentale:</b> 196.00 (score: 10)<br><br><b>Media meritocrazia:</b> 0.25 (score: 6)<br><b>Media inclusività:</b> 0.47 (score: 9)<br><b>Media benessere mentale:</b> 0.10 (score: 6)<br><b>Numero frasi:</b> 2054</div>`)[0];
+                popup_d7d0d9858de990ea9a4e499b4aeca020.setContent(html_d34bb0d731e746e48b0299b9bb8bf16b);
+            
+        
+
+        circle_marker_b34603e32705bad7cb42dcdb40fb4af1.bindPopup(popup_d7d0d9858de990ea9a4e499b4aeca020)
+        ;
+
+        
+    
+    
+            var circle_marker_71dfadc730bc5a736cb9fc766eaba63b = L.circleMarker(
+                [45.41888453, 9.27273498],
+                {"bubblingMouseEvents": true, "color": "#99000dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#99000dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_1b48da027a76a7b307beffe92d12ae1d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8efe006dc3e1ff78e9dd87e2eceeefb5 = $(`<div id="html_8efe006dc3e1ff78e9dd87e2eceeefb5" style="width: 100.0%; height: 100.0%;"><b>P. Levi</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 505.00 (score: 10)<br><b>Somma inclusività:</b> 975.00 (score: 10)<br><b>Somma benessere mentale:</b> 196.00 (score: 10)<br><br><b>Media meritocrazia:</b> 0.25 (score: 6)<br><b>Media inclusività:</b> 0.47 (score: 9)<br><b>Media benessere mentale:</b> 0.10 (score: 7)<br><b>Numero frasi:</b> 2054</div>`)[0];
+                popup_1b48da027a76a7b307beffe92d12ae1d.setContent(html_8efe006dc3e1ff78e9dd87e2eceeefb5);
+            
+        
+
+        circle_marker_71dfadc730bc5a736cb9fc766eaba63b.bindPopup(popup_1b48da027a76a7b307beffe92d12ae1d)
+        ;
+
+        
+    
+    
+            var circle_marker_1f7b9ebddf1721fa9de5013d7b204175 = L.circleMarker(
+                [45.4778846, 9.15065672],
+                {"bubblingMouseEvents": true, "color": "#b60d16ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b60d16ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+    
+        var popup_2f7464b01445c6a943ae91451bd0bf41 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8a7155aff9808cbcfef548e92f04cdc3 = $(`<div id="html_8a7155aff9808cbcfef548e92f04cdc3" style="width: 100.0%; height: 100.0%;"><b>U. Boccioni</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 292.00 (score: 9)<br><b>Somma inclusività:</b> 483.00 (score: 9)<br><b>Somma benessere mentale:</b> 119.00 (score: 9)<br><br><b>Media meritocrazia:</b> 0.23 (score: 5)<br><b>Media inclusività:</b> 0.39 (score: 6)<br><b>Media benessere mentale:</b> 0.10 (score: 6)<br><b>Numero frasi:</b> 1249</div>`)[0];
+                popup_2f7464b01445c6a943ae91451bd0bf41.setContent(html_8a7155aff9808cbcfef548e92f04cdc3);
+            
+        
+
+        circle_marker_1f7b9ebddf1721fa9de5013d7b204175.bindPopup(popup_2f7464b01445c6a943ae91451bd0bf41)
+        ;
+
+        
+    
+    
+    var color_map_4ebd3d47dce963b84a8a854342c5a98a = {};
+
+    
+    color_map_4ebd3d47dce963b84a8a854342c5a98a.color = d3.scale.threshold()
+              .domain([3.0, 3.0140280561122244, 3.0280561122244487, 3.0420841683366735, 3.056112224448898, 3.070140280561122, 3.0841683366733466, 3.0981963927855714, 3.1122244488977957, 3.12625250501002, 3.1402805611222444, 3.1543086172344688, 3.1683366733466936, 3.182364729458918, 3.1963927855711423, 3.2104208416833666, 3.2244488977955914, 3.2384769539078158, 3.25250501002004, 3.2665330661322645, 3.280561122244489, 3.2945891783567136, 3.308617234468938, 3.3226452905811623, 3.3366733466933867, 3.350701402805611, 3.364729458917836, 3.37875751503006, 3.3927855711422845, 3.406813627254509, 3.420841683366733, 3.434869739478958, 3.4488977955911824, 3.4629258517034067, 3.476953907815631, 3.490981963927856, 3.50501002004008, 3.5190380761523046, 3.533066132264529, 3.5470941883767537, 3.561122244488978, 3.5751503006012024, 3.5891783567134268, 3.603206412825651, 3.617234468937876, 3.6312625250501003, 3.6452905811623246, 3.659318637274549, 3.6733466933867733, 3.687374749498998, 3.7014028056112225, 3.715430861723447, 3.729458917835671, 3.7434869739478955, 3.7575150300601203, 3.7715430861723447, 3.785571142284569, 3.799599198396794, 3.813627254509018, 3.8276553106212425, 3.841683366733467, 3.8557114228456912, 3.869739478957916, 3.8837675350701404, 3.8977955911823647, 3.911823647294589, 3.9258517034068134, 3.9398797595190382, 3.9539078156312626, 3.967935871743487, 3.9819639278557113, 3.9959919839679356, 4.01002004008016, 4.024048096192384, 4.038076152304609, 4.052104208416834, 4.066132264529058, 4.080160320641283, 4.094188376753507, 4.108216432865731, 4.122244488977956, 4.13627254509018, 4.150300601202405, 4.164328657314629, 4.1783567134268536, 4.192384769539078, 4.206412825651302, 4.220440881763527, 4.234468937875752, 4.248496993987976, 4.2625250501002006, 4.276553106212425, 4.290581162324649, 4.304609218436874, 4.318637274549098, 4.332665330661323, 4.346693386773547, 4.3607214428857715, 4.374749498997996, 4.38877755511022, 4.402805611222445, 4.41683366733467, 4.430861723446894, 4.4448897795591185, 4.458917835671342, 4.472945891783567, 4.486973947895791, 4.501002004008016, 4.515030060120241, 4.529058116232465, 4.543086172344689, 4.557114228456914, 4.571142284569138, 4.585170340681363, 4.599198396793588, 4.613226452905812, 4.627254509018036, 4.64128256513026, 4.655310621242485, 4.669338677354709, 4.683366733466934, 4.697394789579159, 4.7114228456913825, 4.725450901803607, 4.739478957915832, 4.753507014028056, 4.767535070140281, 4.781563126252505, 4.7955911823647295, 4.809619238476953, 4.823647294589178, 4.837675350701403, 4.851703406813627, 4.865731462925852, 4.8797595190380765, 4.8937875751503, 4.907815631262525, 4.92184368737475, 4.935871743486974, 4.949899799599199, 4.963927855711423, 4.977955911823647, 4.991983967935871, 5.006012024048096, 5.020040080160321, 5.034068136272545, 5.04809619238477, 5.062124248496994, 5.076152304609218, 5.090180360721443, 5.104208416833668, 5.118236472945892, 5.132264529058116, 5.1462925851703405, 5.160320641282565, 5.174348697394789, 5.188376753507014, 5.202404809619239, 5.216432865731463, 5.2304609218436875, 5.244488977955912, 5.258517034068136, 5.27254509018036, 5.286573146292586, 5.30060120240481, 5.314629258517034, 5.328657314629258, 5.342685370741483, 5.356713426853707, 5.370741482965932, 5.384769539078157, 5.398797595190381, 5.412825651302605, 5.42685370741483, 5.440881763527054, 5.454909819639278, 5.468937875751503, 5.482965931863728, 5.4969939879759515, 5.511022044088176, 5.525050100200401, 5.539078156312625, 5.55310621242485, 5.567134268537075, 5.5811623246492985, 5.595190380761522, 5.609218436873748, 5.623246492985972, 5.637274549098196, 5.651302605210421, 5.6653306613226455, 5.679358717434869, 5.693386773547094, 5.707414829659319, 5.721442885771543, 5.735470941883768, 5.7494989979959925, 5.763527054108216, 5.77755511022044, 5.791583166332665, 5.80561122244489, 5.819639278557114, 5.833667334669339, 5.847695390781563, 5.861723446893787, 5.875751503006012, 5.889779559118237, 5.903807615230461, 5.917835671342685, 5.93186372745491, 5.945891783567134, 5.959919839679358, 5.973947895791583, 5.987975951903808, 6.002004008016032, 6.0160320641282565, 6.030060120240481, 6.044088176352705, 6.05811623246493, 6.072144288577155, 6.086172344689379, 6.100200400801603, 6.114228456913827, 6.128256513026052, 6.142284569138276, 6.156312625250501, 6.170340681362726, 6.18436873747495, 6.198396793587174, 6.212424849699399, 6.226452905811623, 6.240480961923847, 6.254509018036073, 6.268537074148297, 6.2825651302605205, 6.296593186372745, 6.31062124248497, 6.324649298597194, 6.338677354709419, 6.352705410821644, 6.3667334669338675, 6.380761523046092, 6.394789579158317, 6.408817635270541, 6.422845691382765, 6.436873747494991, 6.4509018036072145, 6.4649298597194385, 6.478957915831663, 6.492985971943888, 6.507014028056112, 6.521042084168337, 6.5350701402805615, 6.5490981963927855, 6.563126252505009, 6.577154308617235, 6.591182364729459, 6.605210420841683, 6.619238476953908, 6.6332665330661325, 6.647294589178356, 6.661322645290581, 6.675350701402806, 6.68937875751503, 6.703406813627255, 6.7174348697394795, 6.731462925851703, 6.745490981963927, 6.759519038076153, 6.773547094188377, 6.787575150300601, 6.801603206412826, 6.81563126252505, 6.829659318637274, 6.843687374749499, 6.857715430861724, 6.871743486973948, 6.885771543086173, 6.899799599198397, 6.913827655310621, 6.927855711422845, 6.94188376753507, 6.955911823647295, 6.969939879759519, 6.9839679358717435, 6.997995991983968, 7.012024048096192, 7.026052104208417, 7.040080160320641, 7.054108216432866, 7.0681362725450905, 7.082164328657314, 7.096192384769539, 7.110220440881764, 7.124248496993988, 7.138276553106213, 7.152304609218437, 7.166332665330661, 7.180360721442886, 7.19438877755511, 7.208416833667335, 7.222444889779559, 7.236472945891784, 7.250501002004008, 7.264529058116232, 7.278557114228457, 7.292585170340681, 7.306613226452906, 7.320641282565131, 7.3346693386773545, 7.348697394789579, 7.362725450901803, 7.376753507014028, 7.390781563126253, 7.404809619238477, 7.4188376753507015, 7.432865731462926, 7.44689378757515, 7.460921843687375, 7.474949899799599, 7.488977955911824, 7.5030060120240485, 7.517034068136272, 7.531062124248497, 7.545090180360721, 7.559118236472946, 7.573146292585171, 7.587174348697395, 7.601202404809619, 7.615230460921843, 7.629258517034068, 7.643286573146293, 7.657314629258517, 7.671342685370742, 7.6853707414829655, 7.69939879759519, 7.713426853707415, 7.727454909819639, 7.741482965931864, 7.755511022044089, 7.7695390781563125, 7.783567134268537, 7.797595190380761, 7.811623246492986, 7.825651302605211, 7.839679358717435, 7.8537074148296595, 7.867735470941883, 7.881763527054108, 7.895791583166333, 7.909819639278557, 7.923847695390782, 7.937875751503006, 7.95190380761523, 7.965931863727455, 7.979959919839679, 7.993987975951904, 8.008016032064127, 8.022044088176353, 8.036072144288578, 8.050100200400802, 8.064128256513026, 8.07815631262525, 8.092184368737474, 8.1062124248497, 8.120240480961924, 8.13426853707415, 8.148296593186373, 8.162324649298597, 8.176352705410821, 8.190380761523045, 8.20440881763527, 8.218436873747496, 8.23246492985972, 8.246492985971944, 8.260521042084168, 8.274549098196392, 8.288577154308618, 8.302605210420841, 8.316633266533067, 8.330661322645291, 8.344689378757515, 8.358717434869739, 8.372745490981963, 8.386773547094188, 8.400801603206414, 8.414829659318638, 8.428857715430862, 8.442885771543086, 8.45691382765531, 8.470941883767535, 8.48496993987976, 8.498997995991985, 8.513026052104209, 8.527054108216433, 8.541082164328657, 8.55511022044088, 8.569138276553106, 8.58316633266533, 8.597194388777556, 8.61122244488978, 8.625250501002004, 8.639278557114228, 8.653306613226453, 8.667334669338677, 8.681362725450903, 8.695390781563127, 8.70941883767535, 8.723446893787575, 8.737474949899799, 8.751503006012024, 8.765531062124248, 8.779559118236474, 8.793587174348698, 8.807615230460922, 8.821643286573146, 8.83567134268537, 8.849699398797595, 8.86372745490982, 8.877755511022045, 8.891783567134269, 8.905811623246493, 8.919839679358716, 8.933867735470942, 8.947895791583166, 8.961923847695392, 8.975951903807616, 8.98997995991984, 9.004008016032063, 9.018036072144287, 9.032064128256513, 9.046092184368739, 9.060120240480963, 9.074148296593187, 9.08817635270541, 9.102204408817634, 9.11623246492986, 9.130260521042084, 9.14428857715431, 9.158316633266534, 9.172344689378757, 9.186372745490981, 9.200400801603205, 9.214428857715431, 9.228456913827655, 9.24248496993988, 9.256513026052104, 9.270541082164328, 9.284569138276552, 9.298597194388778, 9.312625250501002, 9.326653306613228, 9.340681362725451, 9.354709418837675, 9.3687374749499, 9.382765531062123, 9.396793587174349, 9.410821643286573, 9.424849699398798, 9.438877755511022, 9.452905811623246, 9.46693386773547, 9.480961923847694, 9.49498997995992, 9.509018036072145, 9.52304609218437, 9.537074148296593, 9.551102204408817, 9.565130260521041, 9.579158316633267, 9.59318637274549, 9.607214428857716, 9.62124248496994, 9.635270541082164, 9.649298597194388, 9.663326653306612, 9.677354709418838, 9.691382765531063, 9.705410821643287, 9.719438877755511, 9.733466933867735, 9.747494989979959, 9.761523046092185, 9.775551102204409, 9.789579158316634, 9.803607214428858, 9.817635270541082, 9.831663326653306, 9.84569138276553, 9.859719438877756, 9.873747494989981, 9.887775551102205, 9.901803607214429, 9.915831663326653, 9.929859719438877, 9.943887775551103, 9.957915831663327, 9.971943887775552, 9.985971943887776, 10.0])
+              .range(['#fee5d9ff', '#fee5d9ff', '#fee5d8ff', '#fee4d8ff', '#fee4d7ff', '#fee3d6ff', '#fee3d6ff', '#fee2d5ff', '#fee2d5ff', '#fee1d4ff', '#fee1d4ff', '#fee1d3ff', '#fee0d2ff', '#fee0d2ff', '#fedfd1ff', '#fedfd1ff', '#feded0ff', '#feded0ff', '#feddcfff', '#feddceff', '#feddceff', '#fedccdff', '#fedccdff', '#fedbccff', '#fedbcbff', '#fedacbff', '#fedacaff', '#fed9caff', '#fed9c9ff', '#fed9c9ff', '#fed8c8ff', '#fed8c7ff', '#fed7c7ff', '#fed7c6ff', '#fed6c6ff', '#fed6c5ff', '#fed5c4ff', '#fed5c4ff', '#fed5c3ff', '#fed4c3ff', '#fed4c2ff', '#fed3c2ff', '#fed3c1ff', '#fed2c0ff', '#fed2c0ff', '#fed1bfff', '#fed1bfff', '#fed1beff', '#fed0beff', '#fed0bdff', '#fecfbcff', '#fecfbcff', '#fecebbff', '#fecebbff', '#fecdbaff', '#fecdb9ff', '#fecdb9ff', '#feccb8ff', '#feccb8ff', '#fecbb7ff', '#fecbb7ff', '#fecab6ff', '#fdcab5ff', '#fdcab5ff', '#fdc9b4ff', '#fdc9b4ff', '#fdc8b3ff', '#fdc8b3ff', '#fdc7b2ff', '#fdc7b1ff', '#fdc6b1ff', '#fdc6b0ff', '#fdc6b0ff', '#fdc5afff', '#fdc5aeff', '#fdc4aeff', '#fdc4adff', '#fdc3adff', '#fdc3acff', '#fdc2acff', '#fdc2abff', '#fdc2aaff', '#fdc1aaff', '#fdc1a9ff', '#fdc0a9ff', '#fdc0a8ff', '#fdbfa8ff', '#fdbfa7ff', '#fdbea6ff', '#fdbea6ff', '#fdbea5ff', '#fdbda5ff', '#fdbda4ff', '#fdbca3ff', '#fdbca3ff', '#fdbba2ff', '#fdbba2ff', '#fdbaa1ff', '#fdbaa1ff', '#fdbaa0ff', '#fdb99fff', '#fdb99fff', '#fdb89eff', '#fdb89eff', '#fdb79dff', '#fdb79dff', '#fdb69cff', '#fdb69bff', '#fdb69bff', '#fdb59aff', '#fdb59aff', '#fdb499ff', '#fdb498ff', '#fdb398ff', '#fdb397ff', '#fdb297ff', '#fdb296ff', '#fdb296ff', '#fdb195ff', '#fdb194ff', '#fdb094ff', '#fdb093ff', '#fdaf93ff', '#fdaf92ff', '#fdaf92ff', '#fcae91ff', '#fcad90ff', '#fcad90ff', '#fcac8fff', '#fcac8fff', '#fcab8eff', '#fcab8dff', '#fcaa8dff', '#fcaa8cff', '#fca98cff', '#fca98bff', '#fca88bff', '#fca78aff', '#fca789ff', '#fca689ff', '#fca688ff', '#fca588ff', '#fca587ff', '#fca487ff', '#fca486ff', '#fca385ff', '#fca385ff', '#fca284ff', '#fca184ff', '#fca183ff', '#fca083ff', '#fca082ff', '#fc9f81ff', '#fc9f81ff', '#fc9e80ff', '#fc9e80ff', '#fc9d7fff', '#fc9d7fff', '#fc9c7eff', '#fc9b7dff', '#fc9b7dff', '#fc9a7cff', '#fc9a7cff', '#fc997bff', '#fc997bff', '#fc987aff', '#fc9879ff', '#fc9779ff', '#fc9778ff', '#fc9678ff', '#fc9577ff', '#fc9577ff', '#fc9476ff', '#fc9475ff', '#fc9375ff', '#fc9374ff', '#fc9274ff', '#fc9273ff', '#fc9173ff', '#fc9072ff', '#fc9072ff', '#fc8f71ff', '#fc8f70ff', '#fc8e70ff', '#fc8e6fff', '#fc8d6fff', '#fc8d6eff', '#fc8c6eff', '#fc8c6dff', '#fc8b6cff', '#fc8a6cff', '#fc8a6bff', '#fc896bff', '#fc896aff', '#fc886aff', '#fc8869ff', '#fc8768ff', '#fc8768ff', '#fc8667ff', '#fc8667ff', '#fc8566ff', '#fc8466ff', '#fc8465ff', '#fc8364ff', '#fc8364ff', '#fc8263ff', '#fc8263ff', '#fc8162ff', '#fc8162ff', '#fc8061ff', '#fc8060ff', '#fc7f60ff', '#fc7e5fff', '#fc7e5fff', '#fc7d5eff', '#fc7d5eff', '#fc7c5dff', '#fc7c5cff', '#fc7b5cff', '#fc7b5bff', '#fc7a5bff', '#fc7a5aff', '#fc795aff', '#fc7859ff', '#fc7858ff', '#fc7758ff', '#fc7757ff', '#fc7657ff', '#fc7656ff', '#fc7556ff', '#fc7555ff', '#fc7454ff', '#fc7354ff', '#fc7353ff', '#fc7253ff', '#fc7252ff', '#fc7152ff', '#fc7151ff', '#fc7050ff', '#fc7050ff', '#fc6f4fff', '#fc6f4fff', '#fc6e4eff', '#fc6d4eff', '#fc6d4dff', '#fc6c4cff', '#fc6c4cff', '#fc6b4bff', '#fb6b4bff', '#fb6a4aff', '#fb6a4aff', '#fb6949ff', '#fb6849ff', '#fa6849ff', '#fa6748ff', '#f96648ff', '#f96647ff', '#f96547ff', '#f86447ff', '#f86446ff', '#f76346ff', '#f76246ff', '#f76245ff', '#f66145ff', '#f66045ff', '#f56044ff', '#f55f44ff', '#f55e43ff', '#f45e43ff', '#f45d43ff', '#f45c42ff', '#f35c42ff', '#f35b42ff', '#f25a41ff', '#f25a41ff', '#f25941ff', '#f15840ff', '#f15840ff', '#f0573fff', '#f0563fff', '#f0563fff', '#ef553eff', '#ef543eff', '#ef543eff', '#ee533dff', '#ee523dff', '#ed523dff', '#ed513cff', '#ed513cff', '#ec503bff', '#ec4f3bff', '#eb4f3bff', '#eb4e3aff', '#eb4d3aff', '#ea4d3aff', '#ea4c39ff', '#ea4b39ff', '#e94b39ff', '#e94a38ff', '#e84938ff', '#e84938ff', '#e84837ff', '#e74737ff', '#e74736ff', '#e64636ff', '#e64536ff', '#e64535ff', '#e54435ff', '#e54335ff', '#e54334ff', '#e44234ff', '#e44134ff', '#e34133ff', '#e34033ff', '#e33f32ff', '#e23f32ff', '#e23e32ff', '#e13d31ff', '#e13d31ff', '#e13c31ff', '#e03b30ff', '#e03b30ff', '#df3a30ff', '#df392fff', '#df392fff', '#de382eff', '#de372eff', '#de372eff', '#dd362dff', '#dd352dff', '#dc352dff', '#dc342cff', '#dc332cff', '#db332cff', '#db322bff', '#da312bff', '#da312aff', '#da302aff', '#d9302aff', '#d92f29ff', '#d92e29ff', '#d82e29ff', '#d82d28ff', '#d72c28ff', '#d72c28ff', '#d72b27ff', '#d62a27ff', '#d62a26ff', '#d52926ff', '#d52826ff', '#d52825ff', '#d42725ff', '#d42625ff', '#d42624ff', '#d32524ff', '#d32424ff', '#d22423ff', '#d22323ff', '#d22222ff', '#d12222ff', '#d12122ff', '#d02021ff', '#d02021ff', '#d01f21ff', '#cf1e20ff', '#cf1e20ff', '#ce1d20ff', '#ce1c1fff', '#ce1c1fff', '#cd1b1fff', '#cd1a1eff', '#cd1a1eff', '#cc191dff', '#cc181dff', '#cb181dff', '#cb171dff', '#cb171cff', '#ca171cff', '#ca171cff', '#c9171cff', '#c9161cff', '#c9161cff', '#c8161cff', '#c8161bff', '#c7161bff', '#c7161bff', '#c7151bff', '#c6151bff', '#c6151bff', '#c5151bff', '#c5151bff', '#c5141aff', '#c4141aff', '#c4141aff', '#c3141aff', '#c3141aff', '#c3131aff', '#c2131aff', '#c2131aff', '#c11319ff', '#c11319ff', '#c11219ff', '#c01219ff', '#c01219ff', '#bf1219ff', '#bf1219ff', '#bf1119ff', '#be1118ff', '#be1118ff', '#bd1118ff', '#bd1118ff', '#bd1018ff', '#bc1018ff', '#bc1018ff', '#bb1017ff', '#bb1017ff', '#ba1017ff', '#ba0f17ff', '#ba0f17ff', '#b90f17ff', '#b90f17ff', '#b80f17ff', '#b80e16ff', '#b80e16ff', '#b70e16ff', '#b70e16ff', '#b60e16ff', '#b60d16ff', '#b60d16ff', '#b50d16ff', '#b50d15ff', '#b40d15ff', '#b40c15ff', '#b40c15ff', '#b30c15ff', '#b30c15ff', '#b20c15ff', '#b20b15ff', '#b20b14ff', '#b10b14ff', '#b10b14ff', '#b00b14ff', '#b00b14ff', '#b00a14ff', '#af0a14ff', '#af0a14ff', '#ae0a13ff', '#ae0a13ff', '#ae0913ff', '#ad0913ff', '#ad0913ff', '#ac0913ff', '#ac0913ff', '#ac0812ff', '#ab0812ff', '#ab0812ff', '#aa0812ff', '#aa0812ff', '#aa0712ff', '#a90712ff', '#a90712ff', '#a80711ff', '#a80711ff', '#a80611ff', '#a70611ff', '#a70611ff', '#a60611ff', '#a60611ff', '#a60511ff', '#a50510ff', '#a50510ff', '#a40510ff', '#a40510ff', '#a40510ff', '#a30410ff', '#a30410ff', '#a20410ff', '#a2040fff', '#a2040fff', '#a1030fff', '#a1030fff', '#a0030fff', '#a0030fff', '#a0030fff', '#9f020eff', '#9f020eff', '#9e020eff', '#9e020eff', '#9e020eff', '#9d010eff', '#9d010eff', '#9c010eff', '#9c010dff', '#9c010dff', '#9b000dff', '#9b000dff', '#9a000dff', '#9a000dff', '#9a000dff', '#99000dff']);
+    
+
+    color_map_4ebd3d47dce963b84a8a854342c5a98a.x = d3.scale.linear()
+              .domain([3.0, 10.0])
+              .range([0, 450 - 50]);
+
+    color_map_4ebd3d47dce963b84a8a854342c5a98a.legend = L.control({position: 'topright'});
+    color_map_4ebd3d47dce963b84a8a854342c5a98a.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_4ebd3d47dce963b84a8a854342c5a98a.legend.addTo(map_f715285a8bf5a323b0ac55727b62660d);
+
+    color_map_4ebd3d47dce963b84a8a854342c5a98a.xAxis = d3.svg.axis()
+        .scale(color_map_4ebd3d47dce963b84a8a854342c5a98a.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([3.0, 4.75, 6.5, 8.25, 10.0]);
+
+    color_map_4ebd3d47dce963b84a8a854342c5a98a.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_4ebd3d47dce963b84a8a854342c5a98a.g = color_map_4ebd3d47dce963b84a8a854342c5a98a.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_4ebd3d47dce963b84a8a854342c5a98a.g.selectAll("rect")
+        .data(color_map_4ebd3d47dce963b84a8a854342c5a98a.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_4ebd3d47dce963b84a8a854342c5a98a.x(color_map_4ebd3d47dce963b84a8a854342c5a98a.color.domain()[i - 1]) : color_map_4ebd3d47dce963b84a8a854342c5a98a.x.range()[0],
+            x1: i < color_map_4ebd3d47dce963b84a8a854342c5a98a.color.domain().length ? color_map_4ebd3d47dce963b84a8a854342c5a98a.x(color_map_4ebd3d47dce963b84a8a854342c5a98a.color.domain()[i]) : color_map_4ebd3d47dce963b84a8a854342c5a98a.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_4ebd3d47dce963b84a8a854342c5a98a.g.call(color_map_4ebd3d47dce963b84a8a854342c5a98a.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("somma_meritocrazia_score_1_10 (1-10)");
+    
+            tile_layer_ab108ff814580fe546f90bab5f6c707e.addTo(map_f715285a8bf5a323b0ac55727b62660d);
+        
+</script>
+</html>
