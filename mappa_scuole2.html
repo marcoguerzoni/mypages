@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d63a8f07b59dd2c2c88ac5cfbfc15d0f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d63a8f07b59dd2c2c88ac5cfbfc15d0f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d63a8f07b59dd2c2c88ac5cfbfc15d0f = L.map(
+                "map_d63a8f07b59dd2c2c88ac5cfbfc15d0f",
+                {
+                    center: [45.50285836095238, 9.1832653],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f87e9f36c59b2258bc4291b0020637d0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f87e9f36c59b2258bc4291b0020637d0.addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+            var circle_marker_457cc9fc02875bd2364620a6d00ab1d9 = L.circleMarker(
+                [45.48741908, 9.21368341],
+                {"bubblingMouseEvents": true, "color": "#a0d677ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d677ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_783be5c5e5246915c0eb4d3f16bf7fbc = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_1a82761a52f0c031d64d5fad82284468 = $(`<div id="html_1a82761a52f0c031d64d5fad82284468" style="width: 100.0%; height: 100.0%;"><b>G. Carducci</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 211.00 (score: 6)<br><b>Somma inclusività:</b> 356.00 (score: 5)<br><b>Somma benessere mentale:</b> 63.00 (score: 4)<br><br><b>Media meritocrazia:</b> 0.25 (score: 6)<br><b>Media inclusività:</b> 0.43 (score: 5)<br><b>Media benessere mentale:</b> 0.08 (score: 4)<br><b>Numero frasi:</b> 834</div>`)[0];
+                popup_783be5c5e5246915c0eb4d3f16bf7fbc.setContent(html_1a82761a52f0c031d64d5fad82284468);
+            
+        
+
+        circle_marker_457cc9fc02875bd2364620a6d00ab1d9.bindPopup(popup_783be5c5e5246915c0eb4d3f16bf7fbc)
+        ;
+
+        
+    
+    
+            var circle_marker_6181e71bece2a1bf0c03fdc654ae4130 = L.circleMarker(
+                [45.47824704, 9.16426729],
+                {"bubblingMouseEvents": true, "color": "#d9ef8bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d9ef8bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_47e0fa0432bcf7a2d2204710f83e7501 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d3e610a255349205c8ef5ace8a5b3ec3 = $(`<div id="html_d3e610a255349205c8ef5ace8a5b3ec3" style="width: 100.0%; height: 100.0%;"><b>C. Beccaria</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 165.00 (score: 5)<br><b>Somma inclusività:</b> 204.00 (score: 3)<br><b>Somma benessere mentale:</b> 41.00 (score: 3)<br><br><b>Media meritocrazia:</b> 0.31 (score: 8)<br><b>Media inclusività:</b> 0.39 (score: 5)<br><b>Media benessere mentale:</b> 0.08 (score: 4)<br><b>Numero frasi:</b> 515</div>`)[0];
+                popup_47e0fa0432bcf7a2d2204710f83e7501.setContent(html_d3e610a255349205c8ef5ace8a5b3ec3);
+            
+        
+
+        circle_marker_6181e71bece2a1bf0c03fdc654ae4130.bindPopup(popup_47e0fa0432bcf7a2d2204710f83e7501)
+        ;
+
+        
+    
+    
+            var circle_marker_446d996661b7affa550f10fcbb169520 = L.circleMarker(
+                [45.47435605, 9.1887342],
+                {"bubblingMouseEvents": true, "color": "#faa767ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#faa767ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_9edf6cf309f42d2fa511a2801dcf862d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_bba39bad7f8ad8ad63e5b59b67a73e7b = $(`<div id="html_bba39bad7f8ad8ad63e5b59b67a73e7b" style="width: 100.0%; height: 100.0%;"><b>G. Parini</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 149.00 (score: 4)<br><b>Somma inclusività:</b> 400.00 (score: 7)<br><b>Somma benessere mentale:</b> 105.00 (score: 6)<br><br><b>Media meritocrazia:</b> 0.14 (score: 3)<br><b>Media inclusività:</b> 0.38 (score: 3)<br><b>Media benessere mentale:</b> 0.10 (score: 6)<br><b>Numero frasi:</b> 1047</div>`)[0];
+                popup_9edf6cf309f42d2fa511a2801dcf862d.setContent(html_bba39bad7f8ad8ad63e5b59b67a73e7b);
+            
+        
+
+        circle_marker_446d996661b7affa550f10fcbb169520.bindPopup(popup_9edf6cf309f42d2fa511a2801dcf862d)
+        ;
+
+        
+    
+    
+            var circle_marker_ba89e925b8816d1db5ecc9daab3d8d75 = L.circleMarker(
+                [45.4434577, 9.18773345],
+                {"bubblingMouseEvents": true, "color": "#33a456ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#33a456ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_d1122a5f4b1c3a912f91e35edfb40431 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d34af7c26e1d2013dc1fa8317d115d59 = $(`<div id="html_d34af7c26e1d2013dc1fa8317d115d59" style="width: 100.0%; height: 100.0%;"><b>G. Agnesi</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 358.00 (score: 9)<br><b>Somma inclusività:</b> 554.00 (score: 8)<br><b>Somma benessere mentale:</b> 137.00 (score: 8)<br><br><b>Media meritocrazia:</b> 0.32 (score: 9)<br><b>Media inclusività:</b> 0.50 (score: 8)<br><b>Media benessere mentale:</b> 0.12 (score: 7)<br><b>Numero frasi:</b> 1113</div>`)[0];
+                popup_d1122a5f4b1c3a912f91e35edfb40431.setContent(html_d34af7c26e1d2013dc1fa8317d115d59);
+            
+        
+
+        circle_marker_ba89e925b8816d1db5ecc9daab3d8d75.bindPopup(popup_d1122a5f4b1c3a912f91e35edfb40431)
+        ;
+
+        
+    
+    
+            var circle_marker_e3f48a37cd04b1f3f6ff7efdd0e1fb88 = L.circleMarker(
+                [45.4476067, 9.18226917],
+                {"bubblingMouseEvents": true, "color": "#33a456ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#33a456ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_b3526f4912d21880e2a999ef6485962f = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_fc82cea12ceb032886257cc7f01d713a = $(`<div id="html_fc82cea12ceb032886257cc7f01d713a" style="width: 100.0%; height: 100.0%;"><b>G. Agnesi</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 358.00 (score: 9)<br><b>Somma inclusività:</b> 554.00 (score: 8)<br><b>Somma benessere mentale:</b> 137.00 (score: 8)<br><br><b>Media meritocrazia:</b> 0.32 (score: 9)<br><b>Media inclusività:</b> 0.50 (score: 8)<br><b>Media benessere mentale:</b> 0.12 (score: 8)<br><b>Numero frasi:</b> 1113</div>`)[0];
+                popup_b3526f4912d21880e2a999ef6485962f.setContent(html_fc82cea12ceb032886257cc7f01d713a);
+            
+        
+
+        circle_marker_e3f48a37cd04b1f3f6ff7efdd0e1fb88.bindPopup(popup_b3526f4912d21880e2a999ef6485962f)
+        ;
+
+        
+    
+    
+            var circle_marker_0f90c807bd4334e2c08a8f39df594e60 = L.circleMarker(
+                [45.4476067, 9.18226917],
+                {"bubblingMouseEvents": true, "color": "#33a456ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#33a456ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_b3f2152a112d8d60e1a704234b86ff5b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_d05ff84df2dd0d297e28bd6f10f41b1f = $(`<div id="html_d05ff84df2dd0d297e28bd6f10f41b1f" style="width: 100.0%; height: 100.0%;"><b>G. Agnesi</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 358.00 (score: 9)<br><b>Somma inclusività:</b> 554.00 (score: 8)<br><b>Somma benessere mentale:</b> 137.00 (score: 8)<br><br><b>Media meritocrazia:</b> 0.32 (score: 9)<br><b>Media inclusività:</b> 0.50 (score: 8)<br><b>Media benessere mentale:</b> 0.12 (score: 8)<br><b>Numero frasi:</b> 1113</div>`)[0];
+                popup_b3f2152a112d8d60e1a704234b86ff5b.setContent(html_d05ff84df2dd0d297e28bd6f10f41b1f);
+            
+        
+
+        circle_marker_0f90c807bd4334e2c08a8f39df594e60.bindPopup(popup_b3f2152a112d8d60e1a704234b86ff5b)
+        ;
+
+        
+    
+    
+            var circle_marker_0a2f7255e9a040f83927b98c37b054cc = L.circleMarker(
+                [45.53183714, 9.24016989],
+                {"bubblingMouseEvents": true, "color": "#f46d43ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f46d43ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_f5f6faf3a01134e4b0527b9c7cbe2dee = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_4625636331d55cf013d122f5c81154af = $(`<div id="html_4625636331d55cf013d122f5c81154af" style="width: 100.0%; height: 100.0%;"><b>Erasmo da Rotterdam</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 130.00 (score: 3)<br><b>Somma inclusività:</b> 389.00 (score: 6)<br><b>Somma benessere mentale:</b> 79.00 (score: 5)<br><br><b>Media meritocrazia:</b> 0.20 (score: 4)<br><b>Media inclusività:</b> 0.58 (score: 10)<br><b>Media benessere mentale:</b> 0.12 (score: 7)<br><b>Numero frasi:</b> 665</div>`)[0];
+                popup_f5f6faf3a01134e4b0527b9c7cbe2dee.setContent(html_4625636331d55cf013d122f5c81154af);
+            
+        
+
+        circle_marker_0a2f7255e9a040f83927b98c37b054cc.bindPopup(popup_f5f6faf3a01134e4b0527b9c7cbe2dee)
+        ;
+
+        
+    
+    
+            var circle_marker_61f29e271d50e2518f4fed5365fa33f1 = L.circleMarker(
+                [45.53183714, 9.24016989],
+                {"bubblingMouseEvents": true, "color": "#f46d43ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f46d43ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_f3380a01ae73fe761e50090f1b6c0315 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_c8214209193b27b7609dfed703499527 = $(`<div id="html_c8214209193b27b7609dfed703499527" style="width: 100.0%; height: 100.0%;"><b>Erasmo da Rotterdam</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 130.00 (score: 3)<br><b>Somma inclusività:</b> 389.00 (score: 6)<br><b>Somma benessere mentale:</b> 79.00 (score: 5)<br><br><b>Media meritocrazia:</b> 0.20 (score: 4)<br><b>Media inclusività:</b> 0.58 (score: 10)<br><b>Media benessere mentale:</b> 0.12 (score: 7)<br><b>Numero frasi:</b> 665</div>`)[0];
+                popup_f3380a01ae73fe761e50090f1b6c0315.setContent(html_c8214209193b27b7609dfed703499527);
+            
+        
+
+        circle_marker_61f29e271d50e2518f4fed5365fa33f1.bindPopup(popup_f3380a01ae73fe761e50090f1b6c0315)
+        ;
+
+        
+    
+    
+            var circle_marker_e13b8b5ca219ed0c30abedf5ed68fc73 = L.circleMarker(
+                [45.52478865, 9.2502389],
+                {"bubblingMouseEvents": true, "color": "#f46d43ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f46d43ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_53d909ab5828a54146a1be89cde833e1 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8e17586629f2472d8736d452558d1d85 = $(`<div id="html_8e17586629f2472d8736d452558d1d85" style="width: 100.0%; height: 100.0%;"><b>Erasmo da Rotterdam</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 130.00 (score: 3)<br><b>Somma inclusività:</b> 389.00 (score: 6)<br><b>Somma benessere mentale:</b> 79.00 (score: 5)<br><br><b>Media meritocrazia:</b> 0.20 (score: 4)<br><b>Media inclusività:</b> 0.58 (score: 10)<br><b>Media benessere mentale:</b> 0.12 (score: 7)<br><b>Numero frasi:</b> 665</div>`)[0];
+                popup_53d909ab5828a54146a1be89cde833e1.setContent(html_8e17586629f2472d8736d452558d1d85);
+            
+        
+
+        circle_marker_e13b8b5ca219ed0c30abedf5ed68fc73.bindPopup(popup_53d909ab5828a54146a1be89cde833e1)
+        ;
+
+        
+    
+    
+            var circle_marker_787550a7c5433a929047fe32c0000c3e = L.circleMarker(
+                [45.4784983, 9.181286],
+                {"bubblingMouseEvents": true, "color": "#4cb15dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cb15dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_637c4bb2f6a4208a017d1576442017ee = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_ebaa43302a502faad0136196746d68b6 = $(`<div id="html_ebaa43302a502faad0136196746d68b6" style="width: 100.0%; height: 100.0%;"><b>C. Tenca</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 290.00 (score: 8)<br><b>Somma inclusività:</b> 689.00 (score: 10)<br><b>Somma benessere mentale:</b> 193.00 (score: 10)<br><br><b>Media meritocrazia:</b> 0.20 (score: 4)<br><b>Media inclusività:</b> 0.47 (score: 6)<br><b>Media benessere mentale:</b> 0.13 (score: 8)<br><b>Numero frasi:</b> 1448</div>`)[0];
+                popup_637c4bb2f6a4208a017d1576442017ee.setContent(html_ebaa43302a502faad0136196746d68b6);
+            
+        
+
+        circle_marker_787550a7c5433a929047fe32c0000c3e.bindPopup(popup_637c4bb2f6a4208a017d1576442017ee)
+        ;
+
+        
+    
+    
+            var circle_marker_c1828e442e15d768b0b723d0a4bd3396 = L.circleMarker(
+                [45.4784983, 9.181286],
+                {"bubblingMouseEvents": true, "color": "#4cb15dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cb15dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_cdf9aa8f7df5cf8d6a0d6dc661e453f8 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_089c888f938c550a876bd2092d92ac75 = $(`<div id="html_089c888f938c550a876bd2092d92ac75" style="width: 100.0%; height: 100.0%;"><b>C. Tenca</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 290.00 (score: 8)<br><b>Somma inclusività:</b> 689.00 (score: 10)<br><b>Somma benessere mentale:</b> 193.00 (score: 10)<br><br><b>Media meritocrazia:</b> 0.20 (score: 5)<br><b>Media inclusività:</b> 0.47 (score: 6)<br><b>Media benessere mentale:</b> 0.13 (score: 9)<br><b>Numero frasi:</b> 1448</div>`)[0];
+                popup_cdf9aa8f7df5cf8d6a0d6dc661e453f8.setContent(html_089c888f938c550a876bd2092d92ac75);
+            
+        
+
+        circle_marker_c1828e442e15d768b0b723d0a4bd3396.bindPopup(popup_cdf9aa8f7df5cf8d6a0d6dc661e453f8)
+        ;
+
+        
+    
+    
+            var circle_marker_035297708c7fdabbec071e1bbe30f886 = L.circleMarker(
+                [45.4784983, 9.181286],
+                {"bubblingMouseEvents": true, "color": "#4cb15dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cb15dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_1b8c760e3fa2ab78ac4c6734a3d6a0f6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_83f26c1255f4200f6db713e9f5cbd67f = $(`<div id="html_83f26c1255f4200f6db713e9f5cbd67f" style="width: 100.0%; height: 100.0%;"><b>C. Tenca</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 290.00 (score: 8)<br><b>Somma inclusività:</b> 689.00 (score: 10)<br><b>Somma benessere mentale:</b> 193.00 (score: 10)<br><br><b>Media meritocrazia:</b> 0.20 (score: 5)<br><b>Media inclusività:</b> 0.47 (score: 6)<br><b>Media benessere mentale:</b> 0.13 (score: 9)<br><b>Numero frasi:</b> 1448</div>`)[0];
+                popup_1b8c760e3fa2ab78ac4c6734a3d6a0f6.setContent(html_83f26c1255f4200f6db713e9f5cbd67f);
+            
+        
+
+        circle_marker_035297708c7fdabbec071e1bbe30f886.bindPopup(popup_1b8c760e3fa2ab78ac4c6734a3d6a0f6)
+        ;
+
+        
+    
+    
+            var circle_marker_79654ff6e8bf7636ca88f39e69902b15 = L.circleMarker(
+                [45.47920009, 9.20603831],
+                {"bubblingMouseEvents": true, "color": "#1a9850ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_16b459259c890271c856d320ad5b6a9d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_9c4a3aeecd5f0308a1df22b4ad2a208b = $(`<div id="html_9c4a3aeecd5f0308a1df22b4ad2a208b" style="width: 100.0%; height: 100.0%;"><b>A. Volta</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 472.00 (score: 10)<br><b>Somma inclusività:</b> 643.00 (score: 9)<br><b>Somma benessere mentale:</b> 156.00 (score: 9)<br><br><b>Media meritocrazia:</b> 0.34 (score: 9)<br><b>Media inclusività:</b> 0.46 (score: 5)<br><b>Media benessere mentale:</b> 0.11 (score: 6)<br><b>Numero frasi:</b> 1394</div>`)[0];
+                popup_16b459259c890271c856d320ad5b6a9d.setContent(html_9c4a3aeecd5f0308a1df22b4ad2a208b);
+            
+        
+
+        circle_marker_79654ff6e8bf7636ca88f39e69902b15.bindPopup(popup_16b459259c890271c856d320ad5b6a9d)
+        ;
+
+        
+    
+    
+            var circle_marker_a6af258b095008c7ff8e6def344158d8 = L.circleMarker(
+                [45.54310978, 9.03951385],
+                {"bubblingMouseEvents": true, "color": "#f46d43ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f46d43ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_682f3ff5c4015c575ba013c69e76ef47 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_793d94d1f174439e6d06d2e7f229a0fc = $(`<div id="html_793d94d1f174439e6d06d2e7f229a0fc" style="width: 100.0%; height: 100.0%;"><b>E. Majorana</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 139.00 (score: 3)<br><b>Somma inclusività:</b> 141.00 (score: 3)<br><b>Somma benessere mentale:</b> 12.00 (score: 3)<br><br><b>Media meritocrazia:</b> 0.38 (score: 10)<br><b>Media inclusività:</b> 0.39 (score: 4)<br><b>Media benessere mentale:</b> 0.03 (score: 3)<br><b>Numero frasi:</b> 364</div>`)[0];
+                popup_682f3ff5c4015c575ba013c69e76ef47.setContent(html_793d94d1f174439e6d06d2e7f229a0fc);
+            
+        
+
+        circle_marker_a6af258b095008c7ff8e6def344158d8.bindPopup(popup_682f3ff5c4015c575ba013c69e76ef47)
+        ;
+
+        
+    
+    
+            var circle_marker_b7e28df1c50e020668a26e540a8d7196 = L.circleMarker(
+                [45.54310978, 9.03951385],
+                {"bubblingMouseEvents": true, "color": "#faa767ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#faa767ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_65fb089288f419973bbafe4b04a9f409 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_502aad68b3d097da5f1b6d32a004ba75 = $(`<div id="html_502aad68b3d097da5f1b6d32a004ba75" style="width: 100.0%; height: 100.0%;"><b>E. Majorana</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 139.00 (score: 4)<br><b>Somma inclusività:</b> 141.00 (score: 3)<br><b>Somma benessere mentale:</b> 12.00 (score: 3)<br><br><b>Media meritocrazia:</b> 0.38 (score: 10)<br><b>Media inclusività:</b> 0.39 (score: 4)<br><b>Media benessere mentale:</b> 0.03 (score: 3)<br><b>Numero frasi:</b> 364</div>`)[0];
+                popup_65fb089288f419973bbafe4b04a9f409.setContent(html_502aad68b3d097da5f1b6d32a004ba75);
+            
+        
+
+        circle_marker_b7e28df1c50e020668a26e540a8d7196.bindPopup(popup_65fb089288f419973bbafe4b04a9f409)
+        ;
+
+        
+    
+    
+            var circle_marker_a56af9f3bef6a5b9d642f925b5985c6c = L.circleMarker(
+                [45.58798624, 8.92062359],
+                {"bubblingMouseEvents": true, "color": "#66bd63ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#66bd63ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_dc0feda9baac90e1b6e6e12ca6085a82 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_aed72eeeb1bd2028056060deaca46344 = $(`<div id="html_aed72eeeb1bd2028056060deaca46344" style="width: 100.0%; height: 100.0%;"><b>G. Galilei</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 270.00 (score: 7)<br><b>Somma inclusività:</b> 664.00 (score: 9)<br><b>Somma benessere mentale:</b> 138.00 (score: 8)<br><br><b>Media meritocrazia:</b> 0.19 (score: 3)<br><b>Media inclusività:</b> 0.46 (score: 6)<br><b>Media benessere mentale:</b> 0.10 (score: 5)<br><b>Numero frasi:</b> 1423</div>`)[0];
+                popup_dc0feda9baac90e1b6e6e12ca6085a82.setContent(html_aed72eeeb1bd2028056060deaca46344);
+            
+        
+
+        circle_marker_a56af9f3bef6a5b9d642f925b5985c6c.bindPopup(popup_dc0feda9baac90e1b6e6e12ca6085a82)
+        ;
+
+        
+    
+    
+            var circle_marker_75d9d149bfa0b26e091fb114a037fa44 = L.circleMarker(
+                [45.58798624, 8.92062359],
+                {"bubblingMouseEvents": true, "color": "#4cb15dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cb15dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_9751ee1a3e8a9b64e69d4b3c20d575b2 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_4bd665362cc3ad7c1bb4b7a6be60d91f = $(`<div id="html_4bd665362cc3ad7c1bb4b7a6be60d91f" style="width: 100.0%; height: 100.0%;"><b>G. Galilei</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 270.00 (score: 8)<br><b>Somma inclusività:</b> 664.00 (score: 9)<br><b>Somma benessere mentale:</b> 138.00 (score: 8)<br><br><b>Media meritocrazia:</b> 0.19 (score: 4)<br><b>Media inclusività:</b> 0.46 (score: 6)<br><b>Media benessere mentale:</b> 0.10 (score: 5)<br><b>Numero frasi:</b> 1423</div>`)[0];
+                popup_9751ee1a3e8a9b64e69d4b3c20d575b2.setContent(html_4bd665362cc3ad7c1bb4b7a6be60d91f);
+            
+        
+
+        circle_marker_75d9d149bfa0b26e091fb114a037fa44.bindPopup(popup_9751ee1a3e8a9b64e69d4b3c20d575b2)
+        ;
+
+        
+    
+    
+            var circle_marker_38c09ef1e332331a45ad32585d5f5946 = L.circleMarker(
+                [45.58798624, 8.92062359],
+                {"bubblingMouseEvents": true, "color": "#4cb15dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cb15dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_ff6ec513e2010a5a6093c44e8ef452ff = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_0961f6699af1bf37ebeece5911b98906 = $(`<div id="html_0961f6699af1bf37ebeece5911b98906" style="width: 100.0%; height: 100.0%;"><b>G. Galilei</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 270.00 (score: 8)<br><b>Somma inclusività:</b> 664.00 (score: 9)<br><b>Somma benessere mentale:</b> 138.00 (score: 9)<br><br><b>Media meritocrazia:</b> 0.19 (score: 4)<br><b>Media inclusività:</b> 0.46 (score: 6)<br><b>Media benessere mentale:</b> 0.10 (score: 5)<br><b>Numero frasi:</b> 1423</div>`)[0];
+                popup_ff6ec513e2010a5a6093c44e8ef452ff.setContent(html_0961f6699af1bf37ebeece5911b98906);
+            
+        
+
+        circle_marker_38c09ef1e332331a45ad32585d5f5946.bindPopup(popup_ff6ec513e2010a5a6093c44e8ef452ff)
+        ;
+
+        
+    
+    
+            var circle_marker_b8851487cab9c07cad15fa0f580dec6f = L.circleMarker(
+                [45.45073389, 9.12823574],
+                {"bubblingMouseEvents": true, "color": "#d9ef8bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d9ef8bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_5b47a5edd9da541f36ff1b8d3dc3652c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_c043aa82911aa54ed85d3a7d0d10527b = $(`<div id="html_c043aa82911aa54ed85d3a7d0d10527b" style="width: 100.0%; height: 100.0%;"><b>G. Marconi</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 172.00 (score: 5)<br><b>Somma inclusività:</b> 259.00 (score: 3)<br><b>Somma benessere mentale:</b> 54.00 (score: 3)<br><br><b>Media meritocrazia:</b> 0.32 (score: 8)<br><b>Media inclusività:</b> 0.47 (score: 7)<br><b>Media benessere mentale:</b> 0.10 (score: 5)<br><b>Numero frasi:</b> 546</div>`)[0];
+                popup_5b47a5edd9da541f36ff1b8d3dc3652c.setContent(html_c043aa82911aa54ed85d3a7d0d10527b);
+            
+        
+
+        circle_marker_b8851487cab9c07cad15fa0f580dec6f.bindPopup(popup_5b47a5edd9da541f36ff1b8d3dc3652c)
+        ;
+
+        
+    
+    
+            var circle_marker_8ce3514010629bd45e98a76ef180c68a = L.circleMarker(
+                [45.45073389, 9.12823574],
+                {"bubblingMouseEvents": true, "color": "#d9ef8bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d9ef8bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_aee3f073935502a843de46c6201cc68b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_547be98c78ad43af09d7fc0bdde6172f = $(`<div id="html_547be98c78ad43af09d7fc0bdde6172f" style="width: 100.0%; height: 100.0%;"><b>G. Marconi</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 172.00 (score: 5)<br><b>Somma inclusività:</b> 259.00 (score: 4)<br><b>Somma benessere mentale:</b> 54.00 (score: 4)<br><br><b>Media meritocrazia:</b> 0.32 (score: 8)<br><b>Media inclusività:</b> 0.47 (score: 7)<br><b>Media benessere mentale:</b> 0.10 (score: 6)<br><b>Numero frasi:</b> 546</div>`)[0];
+                popup_aee3f073935502a843de46c6201cc68b.setContent(html_547be98c78ad43af09d7fc0bdde6172f);
+            
+        
+
+        circle_marker_8ce3514010629bd45e98a76ef180c68a.bindPopup(popup_aee3f073935502a843de46c6201cc68b)
+        ;
+
+        
+    
+    
+            var circle_marker_ee9000292b9c2549c198e5fdcd501cca = L.circleMarker(
+                [45.4560254, 9.1257661],
+                {"bubblingMouseEvents": true, "color": "#d9ef8bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d9ef8bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_a69e64c0d2b7c6f9c83dd66f7bc3de80 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_2d3b5490a6c26c0b9826fa4c40222a16 = $(`<div id="html_2d3b5490a6c26c0b9826fa4c40222a16" style="width: 100.0%; height: 100.0%;"><b>G. Marconi</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 172.00 (score: 5)<br><b>Somma inclusività:</b> 259.00 (score: 4)<br><b>Somma benessere mentale:</b> 54.00 (score: 4)<br><br><b>Media meritocrazia:</b> 0.32 (score: 9)<br><b>Media inclusività:</b> 0.47 (score: 7)<br><b>Media benessere mentale:</b> 0.10 (score: 6)<br><b>Numero frasi:</b> 546</div>`)[0];
+                popup_a69e64c0d2b7c6f9c83dd66f7bc3de80.setContent(html_2d3b5490a6c26c0b9826fa4c40222a16);
+            
+        
+
+        circle_marker_ee9000292b9c2549c198e5fdcd501cca.bindPopup(popup_a69e64c0d2b7c6f9c83dd66f7bc3de80)
+        ;
+
+        
+    
+    
+            var circle_marker_62a0170e9caf641a5b3fe0bd54a7c9db = L.circleMarker(
+                [45.45382449, 9.14297027],
+                {"bubblingMouseEvents": true, "color": "#66bd63ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#66bd63ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_62ba73660974cc2c546c307ed0171f58 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a1cb6e10f9fe04b58d960fc41061ae96 = $(`<div id="html_a1cb6e10f9fe04b58d960fc41061ae96" style="width: 100.0%; height: 100.0%;"><b>E. Vittorini</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 262.00 (score: 7)<br><b>Somma inclusività:</b> 292.00 (score: 4)<br><b>Somma benessere mentale:</b> 62.00 (score: 4)<br><br><b>Media meritocrazia:</b> 0.35 (score: 10)<br><b>Media inclusività:</b> 0.39 (score: 5)<br><b>Media benessere mentale:</b> 0.08 (score: 5)<br><b>Numero frasi:</b> 744</div>`)[0];
+                popup_62ba73660974cc2c546c307ed0171f58.setContent(html_a1cb6e10f9fe04b58d960fc41061ae96);
+            
+        
+
+        circle_marker_62a0170e9caf641a5b3fe0bd54a7c9db.bindPopup(popup_62ba73660974cc2c546c307ed0171f58)
+        ;
+
+        
+    
+    
+            var circle_marker_0a3c533ba7e8d266059d05778ac9bd4c = L.circleMarker(
+                [45.50515969, 9.41522635],
+                {"bubblingMouseEvents": true, "color": "#a0d677ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d677ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_7411d9113329d8071fc307ddf5bc745d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5aade49ecbb51d1f0a94b151fdd83f6a = $(`<div id="html_5aade49ecbb51d1f0a94b151fdd83f6a" style="width: 100.0%; height: 100.0%;"><b>G. Bruno</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 202.00 (score: 6)<br><b>Somma inclusività:</b> 389.00 (score: 6)<br><b>Somma benessere mentale:</b> 100.00 (score: 6)<br><br><b>Media meritocrazia:</b> 0.26 (score: 7)<br><b>Media inclusività:</b> 0.49 (score: 7)<br><b>Media benessere mentale:</b> 0.13 (score: 8)<br><b>Numero frasi:</b> 792</div>`)[0];
+                popup_7411d9113329d8071fc307ddf5bc745d.setContent(html_5aade49ecbb51d1f0a94b151fdd83f6a);
+            
+        
+
+        circle_marker_0a3c533ba7e8d266059d05778ac9bd4c.bindPopup(popup_7411d9113329d8071fc307ddf5bc745d)
+        ;
+
+        
+    
+    
+            var circle_marker_06d58f47cbec44a09d17c1b77eaa8eab = L.circleMarker(
+                [45.50515969, 9.41522635],
+                {"bubblingMouseEvents": true, "color": "#a0d677ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d677ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_17d6abf1f1564f808aa814b72e63b415 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_92bf31dcdd3b2cb0be42a41c0de58a71 = $(`<div id="html_92bf31dcdd3b2cb0be42a41c0de58a71" style="width: 100.0%; height: 100.0%;"><b>G. Bruno</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 202.00 (score: 6)<br><b>Somma inclusività:</b> 389.00 (score: 6)<br><b>Somma benessere mentale:</b> 100.00 (score: 6)<br><br><b>Media meritocrazia:</b> 0.26 (score: 7)<br><b>Media inclusività:</b> 0.49 (score: 8)<br><b>Media benessere mentale:</b> 0.13 (score: 8)<br><b>Numero frasi:</b> 792</div>`)[0];
+                popup_17d6abf1f1564f808aa814b72e63b415.setContent(html_92bf31dcdd3b2cb0be42a41c0de58a71);
+            
+        
+
+        circle_marker_06d58f47cbec44a09d17c1b77eaa8eab.bindPopup(popup_17d6abf1f1564f808aa814b72e63b415)
+        ;
+
+        
+    
+    
+            var circle_marker_7361a1a35a2ad8ce6f69401a87cee231 = L.circleMarker(
+                [45.50515969, 9.41522635],
+                {"bubblingMouseEvents": true, "color": "#a0d677ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d677ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_4ff39ec1b8f49a337d3161b724aa034e = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_745208d8bd88e73216aea9d14b64423d = $(`<div id="html_745208d8bd88e73216aea9d14b64423d" style="width: 100.0%; height: 100.0%;"><b>G. Bruno</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 202.00 (score: 6)<br><b>Somma inclusività:</b> 389.00 (score: 7)<br><b>Somma benessere mentale:</b> 100.00 (score: 6)<br><br><b>Media meritocrazia:</b> 0.26 (score: 7)<br><b>Media inclusività:</b> 0.49 (score: 8)<br><b>Media benessere mentale:</b> 0.13 (score: 8)<br><b>Numero frasi:</b> 792</div>`)[0];
+                popup_4ff39ec1b8f49a337d3161b724aa034e.setContent(html_745208d8bd88e73216aea9d14b64423d);
+            
+        
+
+        circle_marker_7361a1a35a2ad8ce6f69401a87cee231.bindPopup(popup_4ff39ec1b8f49a337d3161b724aa034e)
+        ;
+
+        
+    
+    
+            var circle_marker_f1b9e9f0715c8d1e3bea2aba3e16d532 = L.circleMarker(
+                [45.4601312, 8.8851313],
+                {"bubblingMouseEvents": true, "color": "#d9ef8bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d9ef8bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_9e2b1701b5e3537a2d0a156c74cfcc4c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_1e66b4a5f7a0334d6e4660df22acd0ed = $(`<div id="html_1e66b4a5f7a0334d6e4660df22acd0ed" style="width: 100.0%; height: 100.0%;"><b>D. Bramante</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 173.00 (score: 5)<br><b>Somma inclusività:</b> 366.00 (score: 6)<br><b>Somma benessere mentale:</b> 125.00 (score: 8)<br><br><b>Media meritocrazia:</b> 0.21 (score: 5)<br><b>Media inclusività:</b> 0.45 (score: 5)<br><b>Media benessere mentale:</b> 0.15 (score: 10)<br><b>Numero frasi:</b> 788</div>`)[0];
+                popup_9e2b1701b5e3537a2d0a156c74cfcc4c.setContent(html_1e66b4a5f7a0334d6e4660df22acd0ed);
+            
+        
+
+        circle_marker_f1b9e9f0715c8d1e3bea2aba3e16d532.bindPopup(popup_9e2b1701b5e3537a2d0a156c74cfcc4c)
+        ;
+
+        
+    
+    
+            var circle_marker_68a5fac8fa924c46853d707136c0d036 = L.circleMarker(
+                [45.43550515, 9.09544604],
+                {"bubblingMouseEvents": true, "color": "#faa767ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#faa767ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_e2e09f8d6f2de8435c09d2c258a064ac = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5fe3f617f07b6549a12a3d8f0f94b712 = $(`<div id="html_5fe3f617f07b6549a12a3d8f0f94b712" style="width: 100.0%; height: 100.0%;"><b>G.B. Vico</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 150.00 (score: 4)<br><b>Somma inclusività:</b> 317.00 (score: 5)<br><b>Somma benessere mentale:</b> 66.00 (score: 5)<br><br><b>Media meritocrazia:</b> 0.17 (score: 3)<br><b>Media inclusività:</b> 0.36 (score: 3)<br><b>Media benessere mentale:</b> 0.08 (score: 4)<br><b>Numero frasi:</b> 825</div>`)[0];
+                popup_e2e09f8d6f2de8435c09d2c258a064ac.setContent(html_5fe3f617f07b6549a12a3d8f0f94b712);
+            
+        
+
+        circle_marker_68a5fac8fa924c46853d707136c0d036.bindPopup(popup_e2e09f8d6f2de8435c09d2c258a064ac)
+        ;
+
+        
+    
+    
+            var circle_marker_d4c9d0b66c7559c201ea5614358d08c8 = L.circleMarker(
+                [45.43550515, 9.09544604],
+                {"bubblingMouseEvents": true, "color": "#d9ef8bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d9ef8bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_190fa085035c0913cd22c08429a92101 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_394294272b9e14558b3c53394719e1cb = $(`<div id="html_394294272b9e14558b3c53394719e1cb" style="width: 100.0%; height: 100.0%;"><b>G.B. Vico</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 150.00 (score: 5)<br><b>Somma inclusività:</b> 317.00 (score: 5)<br><b>Somma benessere mentale:</b> 66.00 (score: 5)<br><br><b>Media meritocrazia:</b> 0.17 (score: 3)<br><b>Media inclusività:</b> 0.36 (score: 3)<br><b>Media benessere mentale:</b> 0.08 (score: 4)<br><b>Numero frasi:</b> 825</div>`)[0];
+                popup_190fa085035c0913cd22c08429a92101.setContent(html_394294272b9e14558b3c53394719e1cb);
+            
+        
+
+        circle_marker_d4c9d0b66c7559c201ea5614358d08c8.bindPopup(popup_190fa085035c0913cd22c08429a92101)
+        ;
+
+        
+    
+    
+            var circle_marker_88401b0a1a7d758b0c74cb830f46612e = L.circleMarker(
+                [45.56022966, 8.95136704],
+                {"bubblingMouseEvents": true, "color": "#f46d43ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f46d43ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_94f3339439b334af86d269adbb1e8985 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_66953bc3c4f7314913fdb2d08c0e1054 = $(`<div id="html_66953bc3c4f7314913fdb2d08c0e1054" style="width: 100.0%; height: 100.0%;"><b>C. Cavalleri</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 137.00 (score: 3)<br><b>Somma inclusività:</b> 193.00 (score: 3)<br><b>Somma benessere mentale:</b> 46.00 (score: 3)<br><br><b>Media meritocrazia:</b> 0.33 (score: 9)<br><b>Media inclusività:</b> 0.47 (score: 7)<br><b>Media benessere mentale:</b> 0.11 (score: 6)<br><b>Numero frasi:</b> 413</div>`)[0];
+                popup_94f3339439b334af86d269adbb1e8985.setContent(html_66953bc3c4f7314913fdb2d08c0e1054);
+            
+        
+
+        circle_marker_88401b0a1a7d758b0c74cb830f46612e.bindPopup(popup_94f3339439b334af86d269adbb1e8985)
+        ;
+
+        
+    
+    
+            var circle_marker_5a6fc9e4c0fe70739745f59b76569756 = L.circleMarker(
+                [45.5570558, 9.07683154],
+                {"bubblingMouseEvents": true, "color": "#4cb15dff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4cb15dff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_ac1372f891952912c4f693a10c39a947 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_f77b6a93ec2239c018e5aa1559d07632 = $(`<div id="html_f77b6a93ec2239c018e5aa1559d07632" style="width: 100.0%; height: 100.0%;"><b>G. Falcone e  P. Borsellino</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 317.00 (score: 8)<br><b>Somma inclusività:</b> 443.00 (score: 7)<br><b>Somma benessere mentale:</b> 84.00 (score: 6)<br><br><b>Media meritocrazia:</b> 0.28 (score: 7)<br><b>Media inclusività:</b> 0.39 (score: 5)<br><b>Media benessere mentale:</b> 0.07 (score: 3)<br><b>Numero frasi:</b> 1129</div>`)[0];
+                popup_ac1372f891952912c4f693a10c39a947.setContent(html_f77b6a93ec2239c018e5aa1559d07632);
+            
+        
+
+        circle_marker_5a6fc9e4c0fe70739745f59b76569756.bindPopup(popup_ac1372f891952912c4f693a10c39a947)
+        ;
+
+        
+    
+    
+            var circle_marker_a81ef9a2ac23ee6e678747c6a76690d2 = L.circleMarker(
+                [45.5570558, 9.07683154],
+                {"bubblingMouseEvents": true, "color": "#33a456ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#33a456ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_2026b09583cd4e55c289ef6ff35f008c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_679e5f2bfe9de5f5d5aff3da60efbde5 = $(`<div id="html_679e5f2bfe9de5f5d5aff3da60efbde5" style="width: 100.0%; height: 100.0%;"><b>G. Falcone e  P. Borsellino</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 317.00 (score: 9)<br><b>Somma inclusività:</b> 443.00 (score: 8)<br><b>Somma benessere mentale:</b> 84.00 (score: 6)<br><br><b>Media meritocrazia:</b> 0.28 (score: 8)<br><b>Media inclusività:</b> 0.39 (score: 5)<br><b>Media benessere mentale:</b> 0.07 (score: 3)<br><b>Numero frasi:</b> 1129</div>`)[0];
+                popup_2026b09583cd4e55c289ef6ff35f008c.setContent(html_679e5f2bfe9de5f5d5aff3da60efbde5);
+            
+        
+
+        circle_marker_a81ef9a2ac23ee6e678747c6a76690d2.bindPopup(popup_2026b09583cd4e55c289ef6ff35f008c)
+        ;
+
+        
+    
+    
+            var circle_marker_20888aef8cd871f5446f35dd629d488e = L.circleMarker(
+                [45.46270284, 9.22411739],
+                {"bubblingMouseEvents": true, "color": "#33a456ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#33a456ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_0de9fabe5b5bb56c5c1304046d5f4015 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_17955e92661d909f6950887eb22222ec = $(`<div id="html_17955e92661d909f6950887eb22222ec" style="width: 100.0%; height: 100.0%;"><b>R. Donatelli - B. Pascal</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 359.00 (score: 9)<br><b>Somma inclusività:</b> 624.00 (score: 8)<br><b>Somma benessere mentale:</b> 174.00 (score: 9)<br><br><b>Media meritocrazia:</b> 0.30 (score: 8)<br><b>Media inclusività:</b> 0.52 (score: 10)<br><b>Media benessere mentale:</b> 0.15 (score: 9)<br><b>Numero frasi:</b> 1196</div>`)[0];
+                popup_0de9fabe5b5bb56c5c1304046d5f4015.setContent(html_17955e92661d909f6950887eb22222ec);
+            
+        
+
+        circle_marker_20888aef8cd871f5446f35dd629d488e.bindPopup(popup_0de9fabe5b5bb56c5c1304046d5f4015)
+        ;
+
+        
+    
+    
+            var circle_marker_0bcdcc095342cd24f43a9e8f8d6cce85 = L.circleMarker(
+                [45.4808424, 9.2333674],
+                {"bubblingMouseEvents": true, "color": "#1a9850ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_83b93cd6f937e0dad099eea58acc9a5d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_0c561f43580f7bea94d6a215521ae069 = $(`<div id="html_0c561f43580f7bea94d6a215521ae069" style="width: 100.0%; height: 100.0%;"><b>R. Donatelli - B. Pascal</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 359.00 (score: 10)<br><b>Somma inclusività:</b> 624.00 (score: 9)<br><b>Somma benessere mentale:</b> 174.00 (score: 9)<br><br><b>Media meritocrazia:</b> 0.30 (score: 8)<br><b>Media inclusività:</b> 0.52 (score: 10)<br><b>Media benessere mentale:</b> 0.15 (score: 9)<br><b>Numero frasi:</b> 1196</div>`)[0];
+                popup_83b93cd6f937e0dad099eea58acc9a5d.setContent(html_0c561f43580f7bea94d6a215521ae069);
+            
+        
+
+        circle_marker_0bcdcc095342cd24f43a9e8f8d6cce85.bindPopup(popup_83b93cd6f937e0dad099eea58acc9a5d)
+        ;
+
+        
+    
+    
+            var circle_marker_28b54eb41ad3f700815a202e2468bf2b = L.circleMarker(
+                [45.46410259, 9.21842644],
+                {"bubblingMouseEvents": true, "color": "#1a9850ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_f2472492bfe19ef797dea02ecbd3710d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3a6ff2211c8effb3873a9e5d2bad27e3 = $(`<div id="html_3a6ff2211c8effb3873a9e5d2bad27e3" style="width: 100.0%; height: 100.0%;"><b>Liceo Artistico Statale di Brera</b><br><i>Tipo scuola:</i> Istituto di Istruzione Superiore<br><br><b>Somma meritocrazia:</b> 427.00 (score: 10)<br><b>Somma inclusività:</b> 798.00 (score: 10)<br><b>Somma benessere mentale:</b> 184.00 (score: 10)<br><br><b>Media meritocrazia:</b> 0.27 (score: 7)<br><b>Media inclusività:</b> 0.50 (score: 8)<br><b>Media benessere mentale:</b> 0.11 (score: 7)<br><b>Numero frasi:</b> 1596</div>`)[0];
+                popup_f2472492bfe19ef797dea02ecbd3710d.setContent(html_3a6ff2211c8effb3873a9e5d2bad27e3);
+            
+        
+
+        circle_marker_28b54eb41ad3f700815a202e2468bf2b.bindPopup(popup_f2472492bfe19ef797dea02ecbd3710d)
+        ;
+
+        
+    
+    
+            var circle_marker_790f7c7c25a57722230ede141799f8af = L.circleMarker(
+                [45.45971294, 9.18240679],
+                {"bubblingMouseEvents": true, "color": "#1a9850ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_4d48bf53fc2cba56824da10a95821539 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_4e72de4a51593f700cb7e4ce5844176e = $(`<div id="html_4e72de4a51593f700cb7e4ce5844176e" style="width: 100.0%; height: 100.0%;"><b>Liceo Artistico Statale di Brera</b><br><i>Tipo scuola:</i> Istituto di Istruzione Superiore<br><br><b>Somma meritocrazia:</b> 427.00 (score: 10)<br><b>Somma inclusività:</b> 798.00 (score: 10)<br><b>Somma benessere mentale:</b> 184.00 (score: 10)<br><br><b>Media meritocrazia:</b> 0.27 (score: 7)<br><b>Media inclusività:</b> 0.50 (score: 9)<br><b>Media benessere mentale:</b> 0.11 (score: 7)<br><b>Numero frasi:</b> 1596</div>`)[0];
+                popup_4d48bf53fc2cba56824da10a95821539.setContent(html_4e72de4a51593f700cb7e4ce5844176e);
+            
+        
+
+        circle_marker_790f7c7c25a57722230ede141799f8af.bindPopup(popup_4d48bf53fc2cba56824da10a95821539)
+        ;
+
+        
+    
+    
+            var circle_marker_9f864e43cbdd74a52f3ca37fc26ce8a3 = L.circleMarker(
+                [45.4989086, 9.23298725],
+                {"bubblingMouseEvents": true, "color": "#33a456ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#33a456ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_c0a23fb3bbc8d39423f01634f2af8883 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3e57e1a6272432b2ff954de61252bca4 = $(`<div id="html_3e57e1a6272432b2ff954de61252bca4" style="width: 100.0%; height: 100.0%;"><b>Caravaggio</b><br><i>Tipo scuola:</i> Liceo<br><br><b>Somma meritocrazia:</b> 320.00 (score: 9)<br><b>Somma inclusività:</b> 722.00 (score: 10)<br><b>Somma benessere mentale:</b> 200.00 (score: 10)<br><br><b>Media meritocrazia:</b> 0.24 (score: 6)<br><b>Media inclusività:</b> 0.54 (score: 10)<br><b>Media benessere mentale:</b> 0.15 (score: 10)<br><b>Numero frasi:</b> 1347</div>`)[0];
+                popup_c0a23fb3bbc8d39423f01634f2af8883.setContent(html_3e57e1a6272432b2ff954de61252bca4);
+            
+        
+
+        circle_marker_9f864e43cbdd74a52f3ca37fc26ce8a3.bindPopup(popup_c0a23fb3bbc8d39423f01634f2af8883)
+        ;
+
+        
+    
+    
+            var circle_marker_4d7203b221f9af635d2019cf72a7e849 = L.circleMarker(
+                [45.5392769, 9.12476095],
+                {"bubblingMouseEvents": true, "color": "#d9ef8bff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d9ef8bff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_052419eeec37add42f2ea167ef056d81 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_569c62b694965ed18bbaf668fe9cf770 = $(`<div id="html_569c62b694965ed18bbaf668fe9cf770" style="width: 100.0%; height: 100.0%;"><b>P. Levi</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 185.00 (score: 5)<br><b>Somma inclusività:</b> 402.00 (score: 7)<br><b>Somma benessere mentale:</b> 117.00 (score: 7)<br><br><b>Media meritocrazia:</b> 0.23 (score: 6)<br><b>Media inclusività:</b> 0.51 (score: 9)<br><b>Media benessere mentale:</b> 0.15 (score: 9)<br><b>Numero frasi:</b> 795</div>`)[0];
+                popup_052419eeec37add42f2ea167ef056d81.setContent(html_569c62b694965ed18bbaf668fe9cf770);
+            
+        
+
+        circle_marker_4d7203b221f9af635d2019cf72a7e849.bindPopup(popup_052419eeec37add42f2ea167ef056d81)
+        ;
+
+        
+    
+    
+            var circle_marker_3a52caa58f171a93b99f7ff31208d446 = L.circleMarker(
+                [45.5392769, 9.12476095],
+                {"bubblingMouseEvents": true, "color": "#a0d677ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d677ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_ba3c49807baca6d035e66b597ada0606 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b542c5129f4f6875513b8bfd65315646 = $(`<div id="html_b542c5129f4f6875513b8bfd65315646" style="width: 100.0%; height: 100.0%;"><b>P. Levi</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 185.00 (score: 6)<br><b>Somma inclusività:</b> 402.00 (score: 7)<br><b>Somma benessere mentale:</b> 117.00 (score: 7)<br><br><b>Media meritocrazia:</b> 0.23 (score: 6)<br><b>Media inclusività:</b> 0.51 (score: 9)<br><b>Media benessere mentale:</b> 0.15 (score: 10)<br><b>Numero frasi:</b> 795</div>`)[0];
+                popup_ba3c49807baca6d035e66b597ada0606.setContent(html_b542c5129f4f6875513b8bfd65315646);
+            
+        
+
+        circle_marker_3a52caa58f171a93b99f7ff31208d446.bindPopup(popup_ba3c49807baca6d035e66b597ada0606)
+        ;
+
+        
+    
+    
+            var circle_marker_b3b70e7cd371932974f55d516a8f6ffc = L.circleMarker(
+                [45.5392769, 9.12476095],
+                {"bubblingMouseEvents": true, "color": "#a0d677ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a0d677ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_91fb5fab79615963b40bc12e901d0b66 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_eb946cad245158ac9bcb754308696302 = $(`<div id="html_eb946cad245158ac9bcb754308696302" style="width: 100.0%; height: 100.0%;"><b>P. Levi</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 185.00 (score: 6)<br><b>Somma inclusività:</b> 402.00 (score: 7)<br><b>Somma benessere mentale:</b> 117.00 (score: 7)<br><br><b>Media meritocrazia:</b> 0.23 (score: 6)<br><b>Media inclusività:</b> 0.51 (score: 10)<br><b>Media benessere mentale:</b> 0.15 (score: 10)<br><b>Numero frasi:</b> 795</div>`)[0];
+                popup_91fb5fab79615963b40bc12e901d0b66.setContent(html_eb946cad245158ac9bcb754308696302);
+            
+        
+
+        circle_marker_b3b70e7cd371932974f55d516a8f6ffc.bindPopup(popup_91fb5fab79615963b40bc12e901d0b66)
+        ;
+
+        
+    
+    
+            var circle_marker_1b1716317b6208494a12c1ae14f1f413 = L.circleMarker(
+                [45.52142824, 9.30720451],
+                {"bubblingMouseEvents": true, "color": "#66bd63ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#66bd63ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_0d9054fabe36fbbefb4a466a72bcd5ed = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_69019919ffed1b71bd763c12a81ed8d6 = $(`<div id="html_69019919ffed1b71bd763c12a81ed8d6" style="width: 100.0%; height: 100.0%;"><b>M. Curie</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 269.00 (score: 7)<br><b>Somma inclusività:</b> 293.00 (score: 4)<br><b>Somma benessere mentale:</b> 63.00 (score: 4)<br><br><b>Media meritocrazia:</b> 0.35 (score: 10)<br><b>Media inclusività:</b> 0.39 (score: 4)<br><b>Media benessere mentale:</b> 0.08 (score: 4)<br><b>Numero frasi:</b> 757</div>`)[0];
+                popup_0d9054fabe36fbbefb4a466a72bcd5ed.setContent(html_69019919ffed1b71bd763c12a81ed8d6);
+            
+        
+
+        circle_marker_1b1716317b6208494a12c1ae14f1f413.bindPopup(popup_0d9054fabe36fbbefb4a466a72bcd5ed)
+        ;
+
+        
+    
+    
+            var circle_marker_e999c2fc9f4340630e751277e80ca5e3 = L.circleMarker(
+                [45.52142824, 9.30720451],
+                {"bubblingMouseEvents": true, "color": "#66bd63ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#66bd63ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_e8a17c762df4f79cc32a8f9ebd682d3b = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_57c80d0080d0c7981993e55ae77a1e2e = $(`<div id="html_57c80d0080d0c7981993e55ae77a1e2e" style="width: 100.0%; height: 100.0%;"><b>M. Curie</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 269.00 (score: 7)<br><b>Somma inclusività:</b> 293.00 (score: 4)<br><b>Somma benessere mentale:</b> 63.00 (score: 4)<br><br><b>Media meritocrazia:</b> 0.35 (score: 10)<br><b>Media inclusività:</b> 0.39 (score: 4)<br><b>Media benessere mentale:</b> 0.08 (score: 4)<br><b>Numero frasi:</b> 757</div>`)[0];
+                popup_e8a17c762df4f79cc32a8f9ebd682d3b.setContent(html_57c80d0080d0c7981993e55ae77a1e2e);
+            
+        
+
+        circle_marker_e999c2fc9f4340630e751277e80ca5e3.bindPopup(popup_e8a17c762df4f79cc32a8f9ebd682d3b)
+        ;
+
+        
+    
+    
+            var circle_marker_ea9dfc693a79879f25531f6438c15a5f = L.circleMarker(
+                [45.52142824, 9.30720451],
+                {"bubblingMouseEvents": true, "color": "#66bd63ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#66bd63ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_bd8fdbba3d9d6bc57e245bb46948fcfa = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_9aa68a7dda5a0476fdd4d2c67911138f = $(`<div id="html_9aa68a7dda5a0476fdd4d2c67911138f" style="width: 100.0%; height: 100.0%;"><b>M. Curie</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 269.00 (score: 7)<br><b>Somma inclusività:</b> 293.00 (score: 4)<br><b>Somma benessere mentale:</b> 63.00 (score: 5)<br><br><b>Media meritocrazia:</b> 0.35 (score: 10)<br><b>Media inclusività:</b> 0.39 (score: 4)<br><b>Media benessere mentale:</b> 0.08 (score: 5)<br><b>Numero frasi:</b> 757</div>`)[0];
+                popup_bd8fdbba3d9d6bc57e245bb46948fcfa.setContent(html_9aa68a7dda5a0476fdd4d2c67911138f);
+            
+        
+
+        circle_marker_ea9dfc693a79879f25531f6438c15a5f.bindPopup(popup_bd8fdbba3d9d6bc57e245bb46948fcfa)
+        ;
+
+        
+    
+    
+            var circle_marker_1a2dd39ff3ca581bfa8a616913ac48fc = L.circleMarker(
+                [45.52142824, 9.30720451],
+                {"bubblingMouseEvents": true, "color": "#66bd63ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#66bd63ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_4b12b52cb520ad803786ec3f94829964 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_8030f319f685d70ff6a9c0189e916278 = $(`<div id="html_8030f319f685d70ff6a9c0189e916278" style="width: 100.0%; height: 100.0%;"><b>M. Curie</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 269.00 (score: 7)<br><b>Somma inclusività:</b> 293.00 (score: 5)<br><b>Somma benessere mentale:</b> 63.00 (score: 5)<br><br><b>Media meritocrazia:</b> 0.35 (score: 10)<br><b>Media inclusività:</b> 0.39 (score: 4)<br><b>Media benessere mentale:</b> 0.08 (score: 5)<br><b>Numero frasi:</b> 757</div>`)[0];
+                popup_4b12b52cb520ad803786ec3f94829964.setContent(html_8030f319f685d70ff6a9c0189e916278);
+            
+        
+
+        circle_marker_1a2dd39ff3ca581bfa8a616913ac48fc.bindPopup(popup_4b12b52cb520ad803786ec3f94829964)
+        ;
+
+        
+    
+    
+            var circle_marker_c0644cb2f9a578cf7dd697def6a8cf07 = L.circleMarker(
+                [45.5392769, 9.12476095],
+                {"bubblingMouseEvents": true, "color": "#faa767ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#faa767ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_5d7cecaa7c9794e6ed41d1adee633797 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_5a0e24f6af3b27fc453e7fb265909736 = $(`<div id="html_5a0e24f6af3b27fc453e7fb265909736" style="width: 100.0%; height: 100.0%;"><b>Erasmo da Rotterdam</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 144.00 (score: 4)<br><b>Somma inclusività:</b> 316.00 (score: 5)<br><b>Somma benessere mentale:</b> 105.00 (score: 7)<br><br><b>Media meritocrazia:</b> 0.23 (score: 5)<br><b>Media inclusività:</b> 0.50 (score: 9)<br><b>Media benessere mentale:</b> 0.17 (score: 10)<br><b>Numero frasi:</b> 631</div>`)[0];
+                popup_5d7cecaa7c9794e6ed41d1adee633797.setContent(html_5a0e24f6af3b27fc453e7fb265909736);
+            
+        
+
+        circle_marker_c0644cb2f9a578cf7dd697def6a8cf07.bindPopup(popup_5d7cecaa7c9794e6ed41d1adee633797)
+        ;
+
+        
+    
+    
+            var circle_marker_0a19a5cc5937c149518ff28f33762d39 = L.circleMarker(
+                [45.5392769, 9.12476095],
+                {"bubblingMouseEvents": true, "color": "#faa767ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#faa767ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_c250663cad3384ff82364723235d632d = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_316224563aded2a0c45ce56ebef8c634 = $(`<div id="html_316224563aded2a0c45ce56ebef8c634" style="width: 100.0%; height: 100.0%;"><b>Erasmo da Rotterdam</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 144.00 (score: 4)<br><b>Somma inclusività:</b> 316.00 (score: 5)<br><b>Somma benessere mentale:</b> 105.00 (score: 7)<br><br><b>Media meritocrazia:</b> 0.23 (score: 5)<br><b>Media inclusività:</b> 0.50 (score: 9)<br><b>Media benessere mentale:</b> 0.17 (score: 10)<br><b>Numero frasi:</b> 631</div>`)[0];
+                popup_c250663cad3384ff82364723235d632d.setContent(html_316224563aded2a0c45ce56ebef8c634);
+            
+        
+
+        circle_marker_0a19a5cc5937c149518ff28f33762d39.bindPopup(popup_c250663cad3384ff82364723235d632d)
+        ;
+
+        
+    
+    
+            var circle_marker_241270a1bbe784c516eab01686863e33 = L.circleMarker(
+                [45.5392769, 9.12476095],
+                {"bubblingMouseEvents": true, "color": "#faa767ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#faa767ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_19eae4981ca0aac78f51c4e13e5dc599 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_f11333f94eda28383332f4bace5483b9 = $(`<div id="html_f11333f94eda28383332f4bace5483b9" style="width: 100.0%; height: 100.0%;"><b>Erasmo da Rotterdam</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 144.00 (score: 4)<br><b>Somma inclusività:</b> 316.00 (score: 5)<br><b>Somma benessere mentale:</b> 105.00 (score: 7)<br><br><b>Media meritocrazia:</b> 0.23 (score: 6)<br><b>Media inclusività:</b> 0.50 (score: 9)<br><b>Media benessere mentale:</b> 0.17 (score: 10)<br><b>Numero frasi:</b> 631</div>`)[0];
+                popup_19eae4981ca0aac78f51c4e13e5dc599.setContent(html_f11333f94eda28383332f4bace5483b9);
+            
+        
+
+        circle_marker_241270a1bbe784c516eab01686863e33.bindPopup(popup_19eae4981ca0aac78f51c4e13e5dc599)
+        ;
+
+        
+    
+    
+            var circle_marker_a5101880969cb3e0cd9e296bd27a13af = L.circleMarker(
+                [45.61340199, 9.51186684],
+                {"bubblingMouseEvents": true, "color": "#1a9850ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_d9ae718141868f4e76921fce1721dc21 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_e1d852e7c425aa4a7160167ffc9ecd85 = $(`<div id="html_e1d852e7c425aa4a7160167ffc9ecd85" style="width: 100.0%; height: 100.0%;"><b>J. Nizzola</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 362.00 (score: 10)<br><b>Somma inclusività:</b> 589.00 (score: 8)<br><b>Somma benessere mentale:</b> 164.00 (score: 9)<br><br><b>Media meritocrazia:</b> 0.22 (score: 5)<br><b>Media inclusività:</b> 0.36 (score: 3)<br><b>Media benessere mentale:</b> 0.10 (score: 6)<br><b>Numero frasi:</b> 1633</div>`)[0];
+                popup_d9ae718141868f4e76921fce1721dc21.setContent(html_e1d852e7c425aa4a7160167ffc9ecd85);
+            
+        
+
+        circle_marker_a5101880969cb3e0cd9e296bd27a13af.bindPopup(popup_d9ae718141868f4e76921fce1721dc21)
+        ;
+
+        
+    
+    
+            var circle_marker_7572fad646d941aa93750f7aac527414 = L.circleMarker(
+                [45.53904859, 9.03690024],
+                {"bubblingMouseEvents": true, "color": "#1a9850ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_a1fddfeda9d38348f5a7d814af4839d6 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_0ab74b3a18b39e74454a40f7bb24fc63 = $(`<div id="html_0ab74b3a18b39e74454a40f7bb24fc63" style="width: 100.0%; height: 100.0%;"><b>E. Mattei</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 592.00 (score: 10)<br><b>Somma inclusività:</b> 1387.00 (score: 10)<br><b>Somma benessere mentale:</b> 387.00 (score: 10)<br><br><b>Media meritocrazia:</b> 0.20 (score: 5)<br><b>Media inclusività:</b> 0.47 (score: 7)<br><b>Media benessere mentale:</b> 0.13 (score: 9)<br><b>Numero frasi:</b> 2943</div>`)[0];
+                popup_a1fddfeda9d38348f5a7d814af4839d6.setContent(html_0ab74b3a18b39e74454a40f7bb24fc63);
+            
+        
+
+        circle_marker_7572fad646d941aa93750f7aac527414.bindPopup(popup_a1fddfeda9d38348f5a7d814af4839d6)
+        ;
+
+        
+    
+    
+            var circle_marker_9513c8b989ff3ccebfa1eedd2ea3da45 = L.circleMarker(
+                [45.55991695, 8.95156595],
+                {"bubblingMouseEvents": true, "color": "#1a9850ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1a9850ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_2d1a868eb5bda3ce74bf8a292e2dd9c0 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_b4e80fbcf62130311c99a05ff4b0c6ef = $(`<div id="html_b4e80fbcf62130311c99a05ff4b0c6ef" style="width: 100.0%; height: 100.0%;"><b>G. Maggiolini</b><br><i>Tipo scuola:</i> Istituto di Istruzione Superiore<br><br><b>Somma meritocrazia:</b> 406.00 (score: 10)<br><b>Somma inclusività:</b> 687.00 (score: 9)<br><b>Somma benessere mentale:</b> 139.00 (score: 9)<br><br><b>Media meritocrazia:</b> 0.16 (score: 3)<br><b>Media inclusività:</b> 0.27 (score: 3)<br><b>Media benessere mentale:</b> 0.05 (score: 3)<br><b>Numero frasi:</b> 2558</div>`)[0];
+                popup_2d1a868eb5bda3ce74bf8a292e2dd9c0.setContent(html_b4e80fbcf62130311c99a05ff4b0c6ef);
+            
+        
+
+        circle_marker_9513c8b989ff3ccebfa1eedd2ea3da45.bindPopup(popup_2d1a868eb5bda3ce74bf8a292e2dd9c0)
+        ;
+
+        
+    
+    
+            var circle_marker_42cbc867bcb63a39b6153c26000452cc = L.circleMarker(
+                [45.49961045, 9.24209995],
+                {"bubblingMouseEvents": true, "color": "#a50026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_e54674320c0713379ce5886c0d22403e = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_85ad08340e92f20ceb5c83d778d963bc = $(`<div id="html_85ad08340e92f20ceb5c83d778d963bc" style="width: 100.0%; height: 100.0%;"><b>G. Natta</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 1)<br><b>Somma inclusività:</b> 0.00 (score: 1)<br><b>Somma benessere mentale:</b> 0.00 (score: 1)<br><br><b>Media meritocrazia:</b> 0.00 (score: 1)<br><b>Media inclusività:</b> 0.00 (score: 1)<br><b>Media benessere mentale:</b> 0.00 (score: 1)<br><b>Numero frasi:</b> 653</div>`)[0];
+                popup_e54674320c0713379ce5886c0d22403e.setContent(html_85ad08340e92f20ceb5c83d778d963bc);
+            
+        
+
+        circle_marker_42cbc867bcb63a39b6153c26000452cc.bindPopup(popup_e54674320c0713379ce5886c0d22403e)
+        ;
+
+        
+    
+    
+            var circle_marker_6e19578903b4048ec06f8605281b6997 = L.circleMarker(
+                [45.49961045, 9.24209995],
+                {"bubblingMouseEvents": true, "color": "#a50026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_e79bfc5b74c0a144ad11ad87d42ac228 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a8cf60729bcab38b761c76523f52bd68 = $(`<div id="html_a8cf60729bcab38b761c76523f52bd68" style="width: 100.0%; height: 100.0%;"><b>G. Natta</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 1)<br><b>Somma inclusività:</b> 0.00 (score: 1)<br><b>Somma benessere mentale:</b> 0.00 (score: 1)<br><br><b>Media meritocrazia:</b> 0.00 (score: 1)<br><b>Media inclusività:</b> 0.00 (score: 1)<br><b>Media benessere mentale:</b> 0.00 (score: 1)<br><b>Numero frasi:</b> 653</div>`)[0];
+                popup_e79bfc5b74c0a144ad11ad87d42ac228.setContent(html_a8cf60729bcab38b761c76523f52bd68);
+            
+        
+
+        circle_marker_6e19578903b4048ec06f8605281b6997.bindPopup(popup_e79bfc5b74c0a144ad11ad87d42ac228)
+        ;
+
+        
+    
+    
+            var circle_marker_1de0e22901c33e3545e5329cfadda44a = L.circleMarker(
+                [45.49961045, 9.24209995],
+                {"bubblingMouseEvents": true, "color": "#a50026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_adb58c4a626238dd745938864b4a2649 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_4ff0f12683ab0718109fbc1e5ab979aa = $(`<div id="html_4ff0f12683ab0718109fbc1e5ab979aa" style="width: 100.0%; height: 100.0%;"><b>G. Natta</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 1)<br><b>Somma inclusività:</b> 0.00 (score: 1)<br><b>Somma benessere mentale:</b> 0.00 (score: 1)<br><br><b>Media meritocrazia:</b> 0.00 (score: 1)<br><b>Media inclusività:</b> 0.00 (score: 1)<br><b>Media benessere mentale:</b> 0.00 (score: 1)<br><b>Numero frasi:</b> 653</div>`)[0];
+                popup_adb58c4a626238dd745938864b4a2649.setContent(html_4ff0f12683ab0718109fbc1e5ab979aa);
+            
+        
+
+        circle_marker_1de0e22901c33e3545e5329cfadda44a.bindPopup(popup_adb58c4a626238dd745938864b4a2649)
+        ;
+
+        
+    
+    
+            var circle_marker_9579b89e13f37aae8579c1f235466674 = L.circleMarker(
+                [45.44869189, 9.18280281],
+                {"bubblingMouseEvents": true, "color": "#a50026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_a385444e22377d404de8ae022f5eee38 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_acaa167ad630f3cc02ffa16baf10f8a8 = $(`<div id="html_acaa167ad630f3cc02ffa16baf10f8a8" style="width: 100.0%; height: 100.0%;"><b>G. Feltrinelli</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 1)<br><b>Somma inclusività:</b> 0.00 (score: 1)<br><b>Somma benessere mentale:</b> 0.00 (score: 1)<br><br><b>Media meritocrazia:</b> 0.00 (score: 1)<br><b>Media inclusività:</b> 0.00 (score: 1)<br><b>Media benessere mentale:</b> 0.00 (score: 1)<br><b>Numero frasi:</b> 796</div>`)[0];
+                popup_a385444e22377d404de8ae022f5eee38.setContent(html_acaa167ad630f3cc02ffa16baf10f8a8);
+            
+        
+
+        circle_marker_9579b89e13f37aae8579c1f235466674.bindPopup(popup_a385444e22377d404de8ae022f5eee38)
+        ;
+
+        
+    
+    
+            var circle_marker_87b91beb19fdda79bc020ebeeff711fd = L.circleMarker(
+                [45.44869189, 9.18280281],
+                {"bubblingMouseEvents": true, "color": "#a50026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_210de382004bcfb79d4305d2845357dd = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_cad85eb0c324946a1a64509d8b0319be = $(`<div id="html_cad85eb0c324946a1a64509d8b0319be" style="width: 100.0%; height: 100.0%;"><b>G. Feltrinelli</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 1)<br><b>Somma inclusività:</b> 0.00 (score: 1)<br><b>Somma benessere mentale:</b> 0.00 (score: 1)<br><br><b>Media meritocrazia:</b> 0.00 (score: 1)<br><b>Media inclusività:</b> 0.00 (score: 1)<br><b>Media benessere mentale:</b> 0.00 (score: 1)<br><b>Numero frasi:</b> 796</div>`)[0];
+                popup_210de382004bcfb79d4305d2845357dd.setContent(html_cad85eb0c324946a1a64509d8b0319be);
+            
+        
+
+        circle_marker_87b91beb19fdda79bc020ebeeff711fd.bindPopup(popup_210de382004bcfb79d4305d2845357dd)
+        ;
+
+        
+    
+    
+            var circle_marker_de246ac29c02f94656c24c2b90095271 = L.circleMarker(
+                [45.49507364, 9.24013827],
+                {"bubblingMouseEvents": true, "color": "#a50026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_489a13b2d75767c04bbf4bf930313ebf = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3a5f4ba81b62c176631facdcc363a68c = $(`<div id="html_3a5f4ba81b62c176631facdcc363a68c" style="width: 100.0%; height: 100.0%;"><b>E. Molinari</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 1)<br><b>Somma inclusività:</b> 0.00 (score: 1)<br><b>Somma benessere mentale:</b> 0.00 (score: 1)<br><br><b>Media meritocrazia:</b> 0.00 (score: 1)<br><b>Media inclusività:</b> 0.00 (score: 1)<br><b>Media benessere mentale:</b> 0.00 (score: 1)<br><b>Numero frasi:</b> 774</div>`)[0];
+                popup_489a13b2d75767c04bbf4bf930313ebf.setContent(html_3a5f4ba81b62c176631facdcc363a68c);
+            
+        
+
+        circle_marker_de246ac29c02f94656c24c2b90095271.bindPopup(popup_489a13b2d75767c04bbf4bf930313ebf)
+        ;
+
+        
+    
+    
+            var circle_marker_9ca02c71a0121808c21856e9ef667b18 = L.circleMarker(
+                [45.49507364, 9.24013827],
+                {"bubblingMouseEvents": true, "color": "#a50026ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_7cbdc91de6eacdf9d39cd33691cec133 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_556739c0abe24522af4cfbd5c922134d = $(`<div id="html_556739c0abe24522af4cfbd5c922134d" style="width: 100.0%; height: 100.0%;"><b>E. Molinari</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 1)<br><b>Somma inclusività:</b> 0.00 (score: 1)<br><b>Somma benessere mentale:</b> 0.00 (score: 1)<br><br><b>Media meritocrazia:</b> 0.00 (score: 1)<br><b>Media inclusività:</b> 0.00 (score: 1)<br><b>Media benessere mentale:</b> 0.00 (score: 1)<br><b>Numero frasi:</b> 774</div>`)[0];
+                popup_7cbdc91de6eacdf9d39cd33691cec133.setContent(html_556739c0abe24522af4cfbd5c922134d);
+            
+        
+
+        circle_marker_9ca02c71a0121808c21856e9ef667b18.bindPopup(popup_7cbdc91de6eacdf9d39cd33691cec133)
+        ;
+
+        
+    
+    
+            var circle_marker_4f748daf2552f22b902967159771934d = L.circleMarker(
+                [45.43370404, 9.2202217],
+                {"bubblingMouseEvents": true, "color": "#cd3634ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cd3634ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_7578a4f6690a39646af95ac90b826148 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_a196f130b780618cfb1f24c8af93ce81 = $(`<div id="html_a196f130b780618cfb1f24c8af93ce81" style="width: 100.0%; height: 100.0%;"><b>A. Steiner</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 2)<br><b>Somma inclusività:</b> 0.00 (score: 2)<br><b>Somma benessere mentale:</b> 0.00 (score: 2)<br><br><b>Media meritocrazia:</b> 0.00 (score: 2)<br><b>Media inclusività:</b> 0.00 (score: 2)<br><b>Media benessere mentale:</b> 0.00 (score: 2)<br><b>Numero frasi:</b> 830</div>`)[0];
+                popup_7578a4f6690a39646af95ac90b826148.setContent(html_a196f130b780618cfb1f24c8af93ce81);
+            
+        
+
+        circle_marker_4f748daf2552f22b902967159771934d.bindPopup(popup_7578a4f6690a39646af95ac90b826148)
+        ;
+
+        
+    
+    
+            var circle_marker_e563e42079126481e05ed53a5395eba2 = L.circleMarker(
+                [45.53924811, 9.40473547],
+                {"bubblingMouseEvents": true, "color": "#cd3634ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cd3634ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_30e26c33db2db8df769ad92669aeb28c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_59751279b91afe733a8ea57e215e7240 = $(`<div id="html_59751279b91afe733a8ea57e215e7240" style="width: 100.0%; height: 100.0%;"><b>G. Marconi</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 2)<br><b>Somma inclusività:</b> 0.00 (score: 2)<br><b>Somma benessere mentale:</b> 0.00 (score: 2)<br><br><b>Media meritocrazia:</b> 0.00 (score: 2)<br><b>Media inclusività:</b> 0.00 (score: 2)<br><b>Media benessere mentale:</b> 0.00 (score: 2)<br><b>Numero frasi:</b> 1353</div>`)[0];
+                popup_30e26c33db2db8df769ad92669aeb28c.setContent(html_59751279b91afe733a8ea57e215e7240);
+            
+        
+
+        circle_marker_e563e42079126481e05ed53a5395eba2.bindPopup(popup_30e26c33db2db8df769ad92669aeb28c)
+        ;
+
+        
+    
+    
+            var circle_marker_a5c10aa7e30cc34613daba755e563af9 = L.circleMarker(
+                [45.53924811, 9.40473547],
+                {"bubblingMouseEvents": true, "color": "#cd3634ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cd3634ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_d962f3f4703ac74663b41e735e8e6874 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_889b2932a76ee28acdb17910aaea0d7c = $(`<div id="html_889b2932a76ee28acdb17910aaea0d7c" style="width: 100.0%; height: 100.0%;"><b>G. Marconi</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 2)<br><b>Somma inclusività:</b> 0.00 (score: 2)<br><b>Somma benessere mentale:</b> 0.00 (score: 2)<br><br><b>Media meritocrazia:</b> 0.00 (score: 2)<br><b>Media inclusività:</b> 0.00 (score: 2)<br><b>Media benessere mentale:</b> 0.00 (score: 2)<br><b>Numero frasi:</b> 1353</div>`)[0];
+                popup_d962f3f4703ac74663b41e735e8e6874.setContent(html_889b2932a76ee28acdb17910aaea0d7c);
+            
+        
+
+        circle_marker_a5c10aa7e30cc34613daba755e563af9.bindPopup(popup_d962f3f4703ac74663b41e735e8e6874)
+        ;
+
+        
+    
+    
+            var circle_marker_07d50fa554e7eb25b006b8cc4b9306fa = L.circleMarker(
+                [45.53971239, 9.21853835],
+                {"bubblingMouseEvents": true, "color": "#cd3634ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cd3634ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_456de58f23e0ede91b33cb814a29914c = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_592019de4fdc84450bd3ee4fd4116290 = $(`<div id="html_592019de4fdc84450bd3ee4fd4116290" style="width: 100.0%; height: 100.0%;"><b>Cartesio</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 2)<br><b>Somma inclusività:</b> 0.00 (score: 2)<br><b>Somma benessere mentale:</b> 0.00 (score: 2)<br><br><b>Media meritocrazia:</b> 0.00 (score: 2)<br><b>Media inclusività:</b> 0.00 (score: 2)<br><b>Media benessere mentale:</b> 0.00 (score: 2)<br><b>Numero frasi:</b> 994</div>`)[0];
+                popup_456de58f23e0ede91b33cb814a29914c.setContent(html_592019de4fdc84450bd3ee4fd4116290);
+            
+        
+
+        circle_marker_07d50fa554e7eb25b006b8cc4b9306fa.bindPopup(popup_456de58f23e0ede91b33cb814a29914c)
+        ;
+
+        
+    
+    
+            var circle_marker_e055b19d20a7e16c0859bbd7a0c4e350 = L.circleMarker(
+                [45.53971239, 9.21853835],
+                {"bubblingMouseEvents": true, "color": "#cd3634ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cd3634ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_2b11209e68fece8eb55b227129fc3914 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_3a5ae20b693a3eee008d65ccfe7873c3 = $(`<div id="html_3a5ae20b693a3eee008d65ccfe7873c3" style="width: 100.0%; height: 100.0%;"><b>Cartesio</b><br><i>Tipo scuola:</i> Istituto Tecnico<br><br><b>Somma meritocrazia:</b> 0.00 (score: 2)<br><b>Somma inclusività:</b> 0.00 (score: 2)<br><b>Somma benessere mentale:</b> 0.00 (score: 2)<br><br><b>Media meritocrazia:</b> 0.00 (score: 2)<br><b>Media inclusività:</b> 0.00 (score: 2)<br><b>Media benessere mentale:</b> 0.00 (score: 2)<br><b>Numero frasi:</b> 994</div>`)[0];
+                popup_2b11209e68fece8eb55b227129fc3914.setContent(html_3a5ae20b693a3eee008d65ccfe7873c3);
+            
+        
+
+        circle_marker_e055b19d20a7e16c0859bbd7a0c4e350.bindPopup(popup_2b11209e68fece8eb55b227129fc3914)
+        ;
+
+        
+    
+    
+            var circle_marker_75173ceeaa2249bdb1987a643d7dd632 = L.circleMarker(
+                [45.41888453, 9.27273498],
+                {"bubblingMouseEvents": true, "color": "#cd3634ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#cd3634ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_5319397e1d085ec3fa69820c1461e8a4 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_77971e5aa81d4a53d21f56c12c7e4c18 = $(`<div id="html_77971e5aa81d4a53d21f56c12c7e4c18" style="width: 100.0%; height: 100.0%;"><b>E. Mattei</b><br><i>Tipo scuola:</i> Istituto di Istruzione Superiore<br><br><b>Somma meritocrazia:</b> 0.00 (score: 2)<br><b>Somma inclusività:</b> 0.00 (score: 2)<br><b>Somma benessere mentale:</b> 0.00 (score: 2)<br><br><b>Media meritocrazia:</b> 0.00 (score: 2)<br><b>Media inclusività:</b> 0.00 (score: 2)<br><b>Media benessere mentale:</b> 0.00 (score: 2)<br><b>Numero frasi:</b> 1047</div>`)[0];
+                popup_5319397e1d085ec3fa69820c1461e8a4.setContent(html_77971e5aa81d4a53d21f56c12c7e4c18);
+            
+        
+
+        circle_marker_75173ceeaa2249bdb1987a643d7dd632.bindPopup(popup_5319397e1d085ec3fa69820c1461e8a4)
+        ;
+
+        
+    
+    
+            var circle_marker_90769bd1b75817ba4dedb5a83c432ccd = L.circleMarker(
+                [45.41888453, 9.27273498],
+                {"bubblingMouseEvents": true, "color": "#f46d43ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f46d43ff", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+    
+        var popup_6cf0b640b95d340cc4c76f399cbdc754 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_18168862b176c4fb50261ebc40645f97 = $(`<div id="html_18168862b176c4fb50261ebc40645f97" style="width: 100.0%; height: 100.0%;"><b>E. Mattei</b><br><i>Tipo scuola:</i> Istituto di Istruzione Superiore<br><br><b>Somma meritocrazia:</b> 0.00 (score: 3)<br><b>Somma inclusività:</b> 0.00 (score: 3)<br><b>Somma benessere mentale:</b> 0.00 (score: 3)<br><br><b>Media meritocrazia:</b> 0.00 (score: 3)<br><b>Media inclusività:</b> 0.00 (score: 3)<br><b>Media benessere mentale:</b> 0.00 (score: 3)<br><b>Numero frasi:</b> 1047</div>`)[0];
+                popup_6cf0b640b95d340cc4c76f399cbdc754.setContent(html_18168862b176c4fb50261ebc40645f97);
+            
+        
+
+        circle_marker_90769bd1b75817ba4dedb5a83c432ccd.bindPopup(popup_6cf0b640b95d340cc4c76f399cbdc754)
+        ;
+
+        
+    
+    
+    var color_map_cbe38c8fb4a572f26f000a11690db847 = {};
+
+    
+    color_map_cbe38c8fb4a572f26f000a11690db847.color = d3.scale.threshold()
+              .domain([1.0, 1.0180360721442885, 1.0360721442885772, 1.0541082164328657, 1.0721442885771544, 1.0901803607214429, 1.1082164328657313, 1.12625250501002, 1.1442885771543085, 1.1623246492985972, 1.1803607214428857, 1.1983967935871744, 1.216432865731463, 1.2344689378757514, 1.25250501002004, 1.2705410821643286, 1.2885771543086173, 1.3066132264529058, 1.3246492985971945, 1.342685370741483, 1.3607214428857715, 1.3787575150300602, 1.3967935871743486, 1.4148296593186374, 1.4328657314629258, 1.4509018036072145, 1.468937875751503, 1.4869739478957915, 1.5050100200400802, 1.5230460921843687, 1.5410821643286572, 1.559118236472946, 1.5771543086172346, 1.595190380761523, 1.6132264529058116, 1.6312625250501003, 1.6492985971943888, 1.6673346693386772, 1.685370741482966, 1.7034068136272547, 1.7214428857715431, 1.7394789579158316, 1.7575150300601203, 1.7755511022044088, 1.7935871743486973, 1.811623246492986, 1.8296593186372747, 1.847695390781563, 1.8657314629258517, 1.8837675350701404, 1.9018036072144289, 1.9198396793587174, 1.937875751503006, 1.9559118236472945, 1.973947895791583, 1.9919839679358717, 2.0100200400801604, 2.0280561122244487, 2.0460921843687374, 2.064128256513026, 2.0821643286573144, 2.1002004008016035, 2.118236472945892, 2.13627254509018, 2.154308617234469, 2.1723446893787575, 2.190380761523046, 2.208416833667335, 2.226452905811623, 2.244488977955912, 2.2625250501002006, 2.280561122244489, 2.2985971943887775, 2.3166332665330662, 2.3346693386773545, 2.352705410821643, 2.370741482965932, 2.38877755511022, 2.4068136272545093, 2.4248496993987976, 2.4428857715430863, 2.460921843687375, 2.4789579158316633, 2.496993987975952, 2.5150300601202407, 2.533066132264529, 2.5511022044088176, 2.5691382765531063, 2.5871743486973946, 2.6052104208416833, 2.623246492985972, 2.6412825651302603, 2.6593186372745494, 2.6773547094188377, 2.695390781563126, 2.713426853707415, 2.7314629258517034, 2.749498997995992, 2.7675350701402808, 2.785571142284569, 2.8036072144288577, 2.8216432865731464, 2.8396793587174347, 2.8577154308617234, 2.875751503006012, 2.8937875751503004, 2.911823647294589, 2.929859719438878, 2.947895791583166, 2.965931863727455, 2.9839679358717435, 3.002004008016032, 3.0200400801603204, 3.038076152304609, 3.056112224448898, 3.0741482965931866, 3.092184368737475, 3.1102204408817635, 3.1282565130260522, 3.1462925851703405, 3.164328657314629, 3.182364729458918, 3.2004008016032066, 3.218436873747495, 3.2364729458917836, 3.2545090180360723, 3.2725450901803605, 3.2905811623246493, 3.308617234468938, 3.3266533066132267, 3.344689378757515, 3.3627254509018036, 3.3807615230460923, 3.3987975951903806, 3.4168336673346693, 3.434869739478958, 3.4529058116232463, 3.470941883767535, 3.4889779559118237, 3.5070140280561124, 3.5250501002004007, 3.5430861723446894, 3.561122244488978, 3.5791583166332663, 3.597194388777555, 3.6152304609218437, 3.6332665330661325, 3.6513026052104207, 3.6693386773547094, 3.687374749498998, 3.7054108216432864, 3.723446893787575, 3.741482965931864, 3.7595190380761525, 3.7775551102204408, 3.7955911823647295, 3.813627254509018, 3.8316633266533064, 3.849699398797595, 3.867735470941884, 3.8857715430861726, 3.903807615230461, 3.9218436873747495, 3.9398797595190382, 3.9579158316633265, 3.975951903807615, 3.993987975951904, 4.012024048096192, 4.030060120240481, 4.04809619238477, 4.066132264529058, 4.084168336673347, 4.102204408817635, 4.1202404809619235, 4.138276553106213, 4.156312625250501, 4.174348697394789, 4.192384769539078, 4.210420841683367, 4.228456913827655, 4.246492985971944, 4.264529058116232, 4.2825651302605205, 4.30060120240481, 4.318637274549099, 4.336673346693386, 4.354709418837675, 4.3727454909819645, 4.390781563126252, 4.408817635270541, 4.42685370741483, 4.444889779559118, 4.462925851703407, 4.480961923847696, 4.498997995991984, 4.517034068136272, 4.5350701402805615, 4.55310621242485, 4.571142284569138, 4.589178356713427, 4.6072144288577155, 4.625250501002004, 4.643286573146293, 4.661322645290581, 4.679358717434869, 4.697394789579159, 4.715430861723447, 4.733466933867735, 4.751503006012024, 4.7695390781563125, 4.787575150300601, 4.80561122244489, 4.823647294589178, 4.841683366733466, 4.859719438877756, 4.877755511022045, 4.895791583166332, 4.913827655310621, 4.93186372745491, 4.949899799599198, 4.967935871743487, 4.985971943887776, 5.004008016032064, 5.022044088176353, 5.040080160320641, 5.05811623246493, 5.076152304609218, 5.094188376753507, 5.112224448897796, 5.130260521042084, 5.148296593186373, 5.166332665330661, 5.18436873747495, 5.202404809619239, 5.220440881763527, 5.238476953907815, 5.2565130260521045, 5.274549098196393, 5.292585170340681, 5.31062124248497, 5.328657314629258, 5.346693386773547, 5.364729458917836, 5.382765531062124, 5.400801603206413, 5.4188376753507015, 5.43687374749499, 5.454909819639279, 5.472945891783567, 5.490981963927855, 5.509018036072145, 5.527054108216433, 5.545090180360721, 5.56312625250501, 5.5811623246492985, 5.599198396793587, 5.617234468937876, 5.635270541082164, 5.653306613226453, 5.671342685370742, 5.68937875751503, 5.707414829659319, 5.725450901803607, 5.7434869739478955, 5.761523046092185, 5.779559118236473, 5.797595190380761, 5.81563126252505, 5.833667334669339, 5.851703406813627, 5.869739478957916, 5.887775551102204, 5.905811623246493, 5.923847695390782, 5.94188376753507, 5.959919839679359, 5.977955911823647, 5.995991983967936, 6.014028056112225, 6.032064128256513, 6.050100200400801, 6.0681362725450905, 6.086172344689379, 6.104208416833667, 6.122244488977956, 6.140280561122244, 6.158316633266533, 6.176352705410822, 6.19438877755511, 6.212424849699399, 6.2304609218436875, 6.248496993987976, 6.266533066132265, 6.284569138276553, 6.302605210420841, 6.320641282565131, 6.338677354709419, 6.356713426853707, 6.374749498997996, 6.3927855711422845, 6.410821643286573, 6.428857715430862, 6.44689378757515, 6.4649298597194385, 6.482965931863728, 6.501002004008016, 6.519038076152305, 6.537074148296593, 6.5551102204408815, 6.573146292585171, 6.591182364729459, 6.609218436873747, 6.627254509018036, 6.645290581162325, 6.663326653306613, 6.681362725450902, 6.69939879759519, 6.717434869739479, 6.735470941883768, 6.753507014028056, 6.771543086172345, 6.789579158316633, 6.807615230460922, 6.825651302605211, 6.843687374749499, 6.861723446893787, 6.8797595190380765, 6.897795591182365, 6.915831663326653, 6.933867735470942, 6.95190380761523, 6.969939879759519, 6.987975951903808, 7.006012024048096, 7.024048096192384, 7.0420841683366735, 7.060120240480962, 7.078156312625251, 7.096192384769539, 7.114228456913827, 7.132264529058117, 7.150300601202405, 7.168336673346693, 7.186372745490982, 7.2044088176352705, 7.222444889779559, 7.240480961923848, 7.258517034068136, 7.2765531062124245, 7.294589178356714, 7.312625250501002, 7.330661322645291, 7.348697394789579, 7.3667334669338675, 7.384769539078157, 7.402805611222445, 7.420841683366733, 7.438877755511022, 7.456913827655311, 7.474949899799599, 7.492985971943888, 7.511022044088176, 7.529058116232465, 7.547094188376754, 7.565130260521042, 7.58316633266533, 7.601202404809619, 7.619238476953908, 7.637274549098197, 7.655310621242485, 7.673346693386773, 7.6913827655310625, 7.709418837675351, 7.727454909819639, 7.745490981963928, 7.763527054108216, 7.781563126252505, 7.799599198396794, 7.817635270541082, 7.83567134268537, 7.8537074148296595, 7.871743486973948, 7.889779559118236, 7.907815631262525, 7.925851703406813, 7.943887775551103, 7.961923847695391, 7.979959919839679, 7.997995991983968, 8.016032064128257, 8.034068136272545, 8.052104208416834, 8.070140280561123, 8.08817635270541, 8.1062124248497, 8.124248496993989, 8.142284569138276, 8.160320641282565, 8.178356713426854, 8.196392785571142, 8.214428857715431, 8.23246492985972, 8.250501002004007, 8.268537074148297, 8.286573146292586, 8.304609218436873, 8.322645290581162, 8.340681362725451, 8.358717434869739, 8.376753507014028, 8.394789579158317, 8.412825651302605, 8.430861723446894, 8.448897795591183, 8.46693386773547, 8.48496993987976, 8.503006012024048, 8.521042084168336, 8.539078156312625, 8.557114228456914, 8.575150300601202, 8.59318637274549, 8.61122244488978, 8.629258517034067, 8.647294589178356, 8.665330661322646, 8.683366733466933, 8.701402805611222, 8.719438877755511, 8.737474949899799, 8.75551102204409, 8.773547094188377, 8.791583166332664, 8.809619238476955, 8.827655310621243, 8.84569138276553, 8.86372745490982, 8.881763527054108, 8.899799599198396, 8.917835671342687, 8.935871743486974, 8.953907815631261, 8.971943887775552, 8.98997995991984, 9.008016032064129, 9.026052104208416, 9.044088176352705, 9.062124248496994, 9.080160320641282, 9.098196392785571, 9.11623246492986, 9.134268537074147, 9.152304609218437, 9.170340681362726, 9.188376753507015, 9.206412825651302, 9.224448897795591, 9.24248496993988, 9.260521042084168, 9.278557114228457, 9.296593186372746, 9.314629258517034, 9.332665330661323, 9.350701402805612, 9.3687374749499, 9.386773547094188, 9.404809619238478, 9.422845691382765, 9.440881763527054, 9.458917835671343, 9.47695390781563, 9.49498997995992, 9.513026052104209, 9.531062124248496, 9.549098196392785, 9.567134268537075, 9.585170340681362, 9.603206412825651, 9.62124248496994, 9.639278557114228, 9.657314629258517, 9.675350701402806, 9.693386773547093, 9.711422845691382, 9.729458917835672, 9.74749498997996, 9.765531062124248, 9.783567134268537, 9.801603206412826, 9.819639278557114, 9.837675350701403, 9.855711422845692, 9.87374749498998, 9.891783567134269, 9.909819639278558, 9.927855711422845, 9.945891783567134, 9.963927855711423, 9.98196392785571, 10.0])
+              .range(['#a50026ff', '#a60026ff', '#a70126ff', '#a70226ff', '#a80327ff', '#a90427ff', '#a90527ff', '#aa0627ff', '#ab0728ff', '#ac0828ff', '#ac0928ff', '#ad0a29ff', '#ae0b29ff', '#ae0c29ff', '#af0d29ff', '#b00e2aff', '#b10f2aff', '#b1102aff', '#b2112aff', '#b3122bff', '#b3132bff', '#b4142bff', '#b5152bff', '#b6162cff', '#b6172cff', '#b7182cff', '#b8192cff', '#b81a2dff', '#b91b2dff', '#ba1c2dff', '#bb1d2eff', '#bb1e2eff', '#bc1f2eff', '#bd202eff', '#bd212fff', '#be222fff', '#bf232fff', '#c0242fff', '#c02530ff', '#c12630ff', '#c22730ff', '#c22830ff', '#c32931ff', '#c42a31ff', '#c52b31ff', '#c52c31ff', '#c62d32ff', '#c72e32ff', '#c72f32ff', '#c83033ff', '#c93133ff', '#ca3233ff', '#ca3333ff', '#cb3434ff', '#cc3534ff', '#cc3634ff', '#cd3734ff', '#ce3835ff', '#cf3935ff', '#cf3a35ff', '#d03b35ff', '#d13c36ff', '#d13d36ff', '#d23e36ff', '#d33f36ff', '#d44037ff', '#d44137ff', '#d54237ff', '#d64338ff', '#d64438ff', '#d74538ff', '#d84638ff', '#d94739ff', '#d94839ff', '#da4939ff', '#db4a39ff', '#dc4a3aff', '#dc4b3aff', '#dd4c3aff', '#de4d3aff', '#de4e3bff', '#df4f3bff', '#e0503bff', '#e1513bff', '#e1523cff', '#e2533cff', '#e3543cff', '#e3553cff', '#e4563dff', '#e5573dff', '#e6583dff', '#e6593eff', '#e75a3eff', '#e85b3eff', '#e85c3eff', '#e95d3fff', '#ea5e3fff', '#eb5f3fff', '#eb603fff', '#ec6140ff', '#ed6240ff', '#ed6340ff', '#ee6440ff', '#ef6541ff', '#f06641ff', '#f06741ff', '#f16841ff', '#f26942ff', '#f26a42ff', '#f36b42ff', '#f46c43ff', '#f46d43ff', '#f56e43ff', '#f56f44ff', '#f57045ff', '#f57145ff', '#f57246ff', '#f57347ff', '#f57447ff', '#f57548ff', '#f57649ff', '#f57849ff', '#f5794aff', '#f67a4bff', '#f67b4bff', '#f67c4cff', '#f67d4dff', '#f67e4dff', '#f67f4eff', '#f6804fff', '#f6814fff', '#f68250ff', '#f68351ff', '#f68451ff', '#f78552ff', '#f78653ff', '#f78753ff', '#f78854ff', '#f78955ff', '#f78a55ff', '#f78b56ff', '#f78c56ff', '#f78d57ff', '#f78f58ff', '#f79058ff', '#f89159ff', '#f8925aff', '#f8935aff', '#f8945bff', '#f8955cff', '#f8965cff', '#f8975dff', '#f8985eff', '#f8995eff', '#f89a5fff', '#f89b60ff', '#f99c60ff', '#f99d61ff', '#f99e62ff', '#f99f62ff', '#f9a063ff', '#f9a164ff', '#f9a264ff', '#f9a365ff', '#f9a566ff', '#f9a666ff', '#f9a767ff', '#faa868ff', '#faa968ff', '#faaa69ff', '#faab69ff', '#faac6aff', '#faad6bff', '#faae6bff', '#faaf6cff', '#fab06dff', '#fab16dff', '#fab26eff', '#fbb36fff', '#fbb46fff', '#fbb570ff', '#fbb671ff', '#fbb771ff', '#fbb872ff', '#fbb973ff', '#fbba73ff', '#fbbc74ff', '#fbbd75ff', '#fbbe75ff', '#fcbf76ff', '#fcc077ff', '#fcc177ff', '#fcc278ff', '#fcc379ff', '#fcc479ff', '#fcc57aff', '#fcc67bff', '#fcc77bff', '#fcc87cff', '#fcc97cff', '#fdca7dff', '#fdcb7eff', '#fdcc7eff', '#fdcd7fff', '#fdce80ff', '#fdcf80ff', '#fdd081ff', '#fdd182ff', '#fdd382ff', '#fdd483ff', '#fdd584ff', '#fed684ff', '#fed785ff', '#fed886ff', '#fed986ff', '#feda87ff', '#fedb88ff', '#fedc88ff', '#fedd89ff', '#fede8aff', '#fedf8aff', '#fee08bff', '#d9ef8bff', '#d8ef8bff', '#d7ee8aff', '#d6ee8aff', '#d5ee8aff', '#d4ed89ff', '#d3ed89ff', '#d2ec88ff', '#d1ec88ff', '#d0eb88ff', '#cfeb87ff', '#ceea87ff', '#cdea87ff', '#cce986ff', '#cbe986ff', '#cae986ff', '#c8e885ff', '#c7e885ff', '#c6e784ff', '#c5e784ff', '#c4e684ff', '#c3e683ff', '#c2e583ff', '#c1e583ff', '#c0e482ff', '#bfe482ff', '#bee482ff', '#bde381ff', '#bce381ff', '#bbe280ff', '#bae280ff', '#b9e180ff', '#b8e17fff', '#b7e07fff', '#b6e07fff', '#b5df7eff', '#b4df7eff', '#b3df7eff', '#b2de7dff', '#b1de7dff', '#afdd7cff', '#aedd7cff', '#addc7cff', '#acdc7bff', '#abdb7bff', '#aadb7bff', '#a9db7aff', '#a8da7aff', '#a7da7aff', '#a6d979ff', '#a5d979ff', '#a4d878ff', '#a3d878ff', '#a2d778ff', '#a1d777ff', '#a0d677ff', '#9fd677ff', '#9ed676ff', '#9dd576ff', '#9cd576ff', '#9bd475ff', '#9ad475ff', '#99d375ff', '#98d374ff', '#96d274ff', '#95d273ff', '#94d173ff', '#93d173ff', '#92d172ff', '#91d072ff', '#90d072ff', '#8fcf71ff', '#8ecf71ff', '#8dce71ff', '#8cce70ff', '#8bcd70ff', '#8acd6fff', '#89cc6fff', '#88cc6fff', '#87cc6eff', '#86cb6eff', '#85cb6eff', '#84ca6dff', '#83ca6dff', '#82c96dff', '#81c96cff', '#80c86cff', '#7fc86bff', '#7dc86bff', '#7cc76bff', '#7bc76aff', '#7ac66aff', '#79c66aff', '#78c569ff', '#77c569ff', '#76c469ff', '#75c468ff', '#74c368ff', '#73c367ff', '#72c367ff', '#71c267ff', '#70c266ff', '#6fc166ff', '#6ec166ff', '#6dc065ff', '#6cc065ff', '#6bbf65ff', '#6abf64ff', '#69be64ff', '#68be63ff', '#67be63ff', '#66bd63ff', '#65bd63ff', '#65bd63ff', '#64bc63ff', '#64bc62ff', '#63bc62ff', '#63bc62ff', '#63bc62ff', '#62bb62ff', '#62bb62ff', '#61bb62ff', '#61bb62ff', '#60ba61ff', '#60ba61ff', '#5fba61ff', '#5fba61ff', '#5eba61ff', '#5eb961ff', '#5db961ff', '#5db961ff', '#5db961ff', '#5cb860ff', '#5cb860ff', '#5bb860ff', '#5bb860ff', '#5ab860ff', '#5ab760ff', '#59b760ff', '#59b760ff', '#58b760ff', '#58b65fff', '#58b65fff', '#57b65fff', '#57b65fff', '#56b65fff', '#56b55fff', '#55b55fff', '#55b55fff', '#54b55eff', '#54b45eff', '#53b45eff', '#53b45eff', '#52b45eff', '#52b45eff', '#52b35eff', '#51b35eff', '#51b35eff', '#50b35dff', '#50b25dff', '#4fb25dff', '#4fb25dff', '#4eb25dff', '#4eb25dff', '#4db15dff', '#4db15dff', '#4db15dff', '#4cb15cff', '#4cb05cff', '#4bb05cff', '#4bb05cff', '#4ab05cff', '#4ab05cff', '#49af5cff', '#49af5cff', '#48af5cff', '#48af5bff', '#47ae5bff', '#47ae5bff', '#47ae5bff', '#46ae5bff', '#46ae5bff', '#45ad5bff', '#45ad5bff', '#44ad5aff', '#44ad5aff', '#43ac5aff', '#43ac5aff', '#42ac5aff', '#42ac5aff', '#42ac5aff', '#41ab5aff', '#41ab5aff', '#40ab59ff', '#40ab59ff', '#3faa59ff', '#3faa59ff', '#3eaa59ff', '#3eaa59ff', '#3daa59ff', '#3da959ff', '#3ca959ff', '#3ca958ff', '#3ca958ff', '#3ba858ff', '#3ba858ff', '#3aa858ff', '#3aa858ff', '#39a858ff', '#39a758ff', '#38a757ff', '#38a757ff', '#37a757ff', '#37a657ff', '#37a657ff', '#36a657ff', '#36a657ff', '#35a557ff', '#35a557ff', '#34a556ff', '#34a556ff', '#33a556ff', '#33a456ff', '#32a456ff', '#32a456ff', '#31a456ff', '#31a356ff', '#31a356ff', '#30a355ff', '#30a355ff', '#2fa355ff', '#2fa255ff', '#2ea255ff', '#2ea255ff', '#2da255ff', '#2da155ff', '#2ca155ff', '#2ca154ff', '#2ba154ff', '#2ba154ff', '#2ba054ff', '#2aa054ff', '#2aa054ff', '#29a054ff', '#299f54ff', '#289f53ff', '#289f53ff', '#279f53ff', '#279f53ff', '#269e53ff', '#269e53ff', '#269e53ff', '#259e53ff', '#259d53ff', '#249d52ff', '#249d52ff', '#239d52ff', '#239d52ff', '#229c52ff', '#229c52ff', '#219c52ff', '#219c52ff', '#209b52ff', '#209b51ff', '#209b51ff', '#1f9b51ff', '#1f9b51ff', '#1e9a51ff', '#1e9a51ff', '#1d9a51ff', '#1d9a51ff', '#1c9951ff', '#1c9950ff', '#1b9950ff', '#1b9950ff', '#1b9950ff', '#1a9850ff', '#1a9850ff']);
+    
+
+    color_map_cbe38c8fb4a572f26f000a11690db847.x = d3.scale.linear()
+              .domain([1.0, 10.0])
+              .range([0, 450 - 50]);
+
+    color_map_cbe38c8fb4a572f26f000a11690db847.legend = L.control({position: 'topright'});
+    color_map_cbe38c8fb4a572f26f000a11690db847.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_cbe38c8fb4a572f26f000a11690db847.legend.addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+
+    color_map_cbe38c8fb4a572f26f000a11690db847.xAxis = d3.svg.axis()
+        .scale(color_map_cbe38c8fb4a572f26f000a11690db847.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([1.0, 3.0, 4.99, 5.0, 7.0, 10.0]);
+
+    color_map_cbe38c8fb4a572f26f000a11690db847.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_cbe38c8fb4a572f26f000a11690db847.g = color_map_cbe38c8fb4a572f26f000a11690db847.svg.append("g")
+        .attr("class", "key")
+        .attr("fill", "black")
+        .attr("transform", "translate(25,16)");
+
+    color_map_cbe38c8fb4a572f26f000a11690db847.g.selectAll("rect")
+        .data(color_map_cbe38c8fb4a572f26f000a11690db847.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_cbe38c8fb4a572f26f000a11690db847.x(color_map_cbe38c8fb4a572f26f000a11690db847.color.domain()[i - 1]) : color_map_cbe38c8fb4a572f26f000a11690db847.x.range()[0],
+            x1: i < color_map_cbe38c8fb4a572f26f000a11690db847.color.domain().length ? color_map_cbe38c8fb4a572f26f000a11690db847.x(color_map_cbe38c8fb4a572f26f000a11690db847.color.domain()[i]) : color_map_cbe38c8fb4a572f26f000a11690db847.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_cbe38c8fb4a572f26f000a11690db847.g.call(color_map_cbe38c8fb4a572f26f000a11690db847.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .attr("fill", "black")
+        .text("somma_meritocrazia_score_1_10 (1-10)");
+    
+            tile_layer_f87e9f36c59b2258bc4291b0020637d0.addTo(map_d63a8f07b59dd2c2c88ac5cfbfc15d0f);
+        
+</script>
+</html>
